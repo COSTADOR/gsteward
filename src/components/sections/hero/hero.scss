@@ -1,0 +1,40 @@
+.hero {
+  &__container {
+    &.hero__default {
+      background: linear-gradient(
+              to right,
+              rgba(255, 255, 255, 1) 35%,
+              rgba(255, 255, 255, 0) 60%
+      ),
+      url("../../../../static/images/hero-main.jpg");
+      background-size: auto 100%;
+      background-position: 100%;
+      background-repeat: no-repeat;
+    }
+    &.hero__about-us {
+      background: linear-gradient(
+              to right,
+              rgba(255, 255, 255, 1) 40%,
+              rgba(255, 255, 255, 0) 75%
+      ),
+      url("../../../../static/images/hero-about-us.jpg");
+      background-size: auto 100%;
+      background-position: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+  &__text {
+    padding: 120px 370px 120px 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    h1 em {
+      font-style: italic;
+      font-weight: var(--weight-medium);
+    }
+  }
+  &__description {
+    width: 450px;
+    color: var(--text-secondary);
+  }
+}

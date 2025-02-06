@@ -1,0 +1,25 @@
+.cta {
+  background: radial-gradient(circle, #38acd6 0%, transparent 50%),
+    linear-gradient(
+      to bottom,
+      #067aa7 0%,
+      #0e7ba4 18%,
+      #047aa4 39%,
+      #0378a3 64%,
+      #06769b 81%,
+      #04759b 100%
+    );
+  &__container {
+    padding: 96px;
+    text-align: center;
+    color: var(--text-white);
+  }
+  &__title {
+    margin-bottom: 16px;
+  }
+  &__description {
+    font-size: var(--body-sm);
+    margin-bottom: 48px;
+    line-height: 1.5;
+  }
+}

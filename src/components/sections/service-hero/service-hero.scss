@@ -1,0 +1,52 @@
+.service-hero {
+  margin-bottom: 72px;
+
+  &__container {
+    margin-top: 120px;
+  }
+
+  &__header {
+    padding: 0 72px;
+    margin-bottom: 48px;
+  }
+
+  &__subtitle {
+    font-size: var(--subtitle);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__stats {
+    background: var(--primary-25);
+    border-radius: 20px;
+    padding: 72px;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__stat-number {
+    font-size: var(--title-xxl);
+  }
+
+  &__cta {
+    background: #d0dbeb;
+    padding: 15px 32px;
+    margin: 0 40px;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,24 @@
+.contact {
+  &__container {
+    border-radius: 20px;
+    background: var(--primary-25);
+    padding: 72px;
+    display: flex;
+    gap: 56px;
+  }
+  &__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  &__map {
+    flex: 1;
+  }
+  &__title {
+    color: var(--text-secondary);
+  }
+  &__text {
+    margin-bottom: 24px;
+  }
+}

@@ -1,0 +1,48 @@
+@import "../../../styles/breakpoints";
+
+.footer {
+  background-color: var(--black);
+  color: white;
+  text-align: center;
+  padding: 30px;
+  &__container {
+    padding: 0 72px;
+  }
+  &__logo {
+    &-image {
+      width: 300px;
+    }
+  }
+  &__top {
+    display: flex;
+    text-align: left;
+    gap: 20%;
+    border-bottom: 1px solid #1b192d;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+  &__content {
+    display: flex;
+    flex: 1;
+    padding: 35px 0;
+    gap: 15%;
+  }
+  &__bottom {
+    margin-top: 20px;
+    font-size: var(--body-sm);
+    color: #7f90a9;
+  }
+  &__title {
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: var(--weight-bold);
+  }
+  &__list li,
+  &__text {
+    font-size: var(--body-sm);
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+}

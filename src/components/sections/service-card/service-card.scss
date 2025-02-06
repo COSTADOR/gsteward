@@ -1,0 +1,63 @@
+.service-card {
+  display: flex;
+  gap: 32px;
+
+  &__image {
+    width: 300px;
+    height: 168px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 12px;
+    img {
+      transition: transform 0.5s ease-in;
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    color: var(--text-secondary);
+    font-size: var(--body-sm);
+    margin-bottom: 20px;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__tag {
+    height: 40px;
+    padding: 0 12px 0 36px;
+    border: 1px solid #e8edf4;
+    border-radius: 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: var(--text-primary);
+    position: relative;
+    &::before {
+      content: "";
+      width: 26px;
+      height: 26px;
+      position: absolute;
+      left: 8px;
+      background-image: url("../../../../static/images/icons/mark.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+  }
+}

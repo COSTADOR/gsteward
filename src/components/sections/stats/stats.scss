@@ -1,0 +1,44 @@
+.stats {
+  &__container {
+    padding: 72px;
+    //background: var(--);
+    //background: linear-gradient(90deg, #0076A1 0%, #41A5CD 30%, #0076A1 80%);
+    //background: radial-gradient(circle at 35% 150%, #4cb4de 0%, #0076A1 70%);
+    background: radial-gradient(
+        circle at 30% 50%,
+        rgba(65, 165, 205, 0.8) 0%,
+        rgba(0, 118, 161, 0) 50%
+      ),
+      radial-gradient(
+        circle at 70% 50%,
+        rgba(65, 165, 205, 0.8) 0%,
+        rgba(0, 118, 161, 0) 50%
+      ),
+      #0076a1;
+    //background: #04759B;
+    border-radius: 20px;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    padding-right: 30%;
+    position: relative;
+    overflow: hidden;
+    &::after {
+      content: url("../../../../static/images/cleaning-device.png");
+      position: absolute;
+      bottom: -5px;
+      right: 0;
+    }
+  }
+  &__item {
+    color: var(--text-white);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    &--value {
+      font-size: 84px;
+    }
+    &--name {
+    }
+  }
+}
