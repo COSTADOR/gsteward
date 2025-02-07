@@ -28,8 +28,8 @@ const Steps: React.FC = () => {
     <section className="steps">
       <div className="steps__container container">
         <h2 className="steps__title title-lg">
-          How we work — <br />
-          <em>Your seamless cleaning journey</em>
+          How we work <br />
+          <em>— Your seamless cleaning journey</em>
         </h2>
         <div className="steps__content">
           <div className="steps__list">

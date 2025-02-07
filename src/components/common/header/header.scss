@@ -43,10 +43,11 @@
       align-items: center;
       padding: 0 25px;
       text-decoration: none;
-      font-size: var(--body-sm);
+      font-size: var(--body-xsm);
       font-weight: var(--weight-bold);
       transition: color 0.3s;
       border-bottom: 2px solid transparent;
+      text-transform: uppercase;
       
       @include xlg {
         padding: 0 15px;
@@ -99,7 +100,6 @@
     
     &__nav-link {
       justify-content: center;
-      text-transform: uppercase;
       height: 30px;
       font-size: 16px;
       
