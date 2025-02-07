@@ -35,7 +35,14 @@ const Header: React.FC = () => {
             width={150}
           />
         </Link>
-
+        
+        <input type="checkbox" id="menu-toggle" className="header__checkbox" />
+        <label htmlFor="menu-toggle" className="header__burger">
+          <span className="header__burger-line"></span>
+          <span className="header__burger-line"></span>
+          <span className="header__burger-line"></span>
+        </label>
+        
         <nav className="header__nav">
           <ul className="header__nav-list">
             {navItems.map(item => (
@@ -51,8 +58,8 @@ const Header: React.FC = () => {
             ))}
           </ul>
         </nav>
-
-        <Link to="/contact-us" className="button button--primary">
+        
+        <Link to="/contact-us" className="button button--primary header__contact-us">
           Contact Us
         </Link>
       </div>

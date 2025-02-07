@@ -15,7 +15,7 @@ const title = `Your space, <em>our expertise</em>
 const description = `From offices to commercial spaces, our professional cleaning services deliver unmatched quality and a spotless experience.`
 
 const IndexPage = () => (
-  <Layout>
+  <Layout className={'main-page'}>
     <Hero title={title} description={description} showServicesButton={true}/>
     <Steps />
     <Features />

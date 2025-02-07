@@ -6,7 +6,7 @@
   text-align: center;
   padding: 30px;
   &__container {
-    padding: 0 72px;
+    padding: 0 var(--spacing-xl);
   }
   &__logo {
     &-image {
@@ -18,7 +18,7 @@
     text-align: left;
     gap: 20%;
     border-bottom: 1px solid #1b192d;
-    @include tablet {
+    @include md {
       flex-direction: column;
     }
   }

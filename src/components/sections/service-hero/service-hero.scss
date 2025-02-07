@@ -1,12 +1,12 @@
 .service-hero {
-  margin-bottom: 72px;
+  margin-bottom: var(--spacing-xl);
 
   &__container {
-    margin-top: 120px;
+    margin-top: var(--spacing-xxl);
   }
 
   &__header {
-    padding: 0 72px;
+    padding: 0 var(--spacing-xl);
     margin-bottom: 48px;
   }
 
@@ -23,7 +23,7 @@
   &__stats {
     background: var(--primary-25);
     border-radius: 20px;
-    padding: 72px;
+    padding: var(--spacing-xl);
     display: flex;
     gap: 20px;
   }

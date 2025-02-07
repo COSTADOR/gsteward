@@ -2,7 +2,7 @@
 
 .core-values {
 	&__container {
-		padding: 72px;
+		padding: var(--spacing-xl);
 		text-align: center;
 		display: flex;
 		flex-direction: column;
@@ -20,10 +20,10 @@
 	&__content {
 		width: 100%;
 		display: grid;
-		grid-template-columns: 1fr;
+		grid-template-columns: 1fr 1fr;
 		gap: 24px;
-		@include desktop {
-			grid-template-columns: 1fr 1fr;
+		@include md {
+			grid-template-columns: 1fr;
 		}
 	}
 	&__item {

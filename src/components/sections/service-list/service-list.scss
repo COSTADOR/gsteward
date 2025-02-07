@@ -1,8 +1,8 @@
 .service-list {
-  margin-bottom: 72px;
+  margin-bottom: var(--spacing-xl);
 
   &__container {
-    padding: 0 72px;
+    padding: 0 var(--spacing-xl);
   }
 
   &__title {

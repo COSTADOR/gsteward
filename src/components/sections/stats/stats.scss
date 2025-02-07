@@ -1,6 +1,8 @@
+@import "../../../styles/breakpoints";
+
 .stats {
   &__container {
-    padding: 72px;
+    padding: var(--spacing-xl);
     //background: var(--);
     //background: linear-gradient(90deg, #0076A1 0%, #41A5CD 30%, #0076A1 80%);
     //background: radial-gradient(circle at 35% 150%, #4cb4de 0%, #0076A1 70%);
@@ -23,6 +25,10 @@
     padding-right: 30%;
     position: relative;
     overflow: hidden;
+    @include md {
+      flex-direction: column;
+      padding: 30px;
+    }
     &::after {
       content: url("../../../../static/images/cleaning-device.png");
       position: absolute;

@@ -1,10 +1,16 @@
+@import "../../../styles/breakpoints";
+
+
 .contact {
   &__container {
     border-radius: 20px;
     background: var(--primary-25);
-    padding: 72px;
+    padding: var(--spacing-xl);
     display: flex;
     gap: 56px;
+    @include md {
+      flex-direction: column;
+    }
   }
   &__info {
     flex: 1;
@@ -14,6 +20,13 @@
   }
   &__map {
     flex: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    
+    @include md {
+      flex: none;
+      height: 400px;
+    }
   }
   &__title {
     color: var(--text-secondary);

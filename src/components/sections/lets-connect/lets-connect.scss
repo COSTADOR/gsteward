@@ -1,7 +1,7 @@
 .lets-connect {
   &__container {
     border-radius: 20px;
-    padding: 120px 72px 72px;
+    padding: var(--spacing-xxl) var(--spacing-xl) var(--spacing-xl);
     display: flex;
     gap: 56px;
   }

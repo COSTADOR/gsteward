@@ -1,6 +1,7 @@
 @use "reset";
 @use "breakpoints";
 @use "variables";
+@use "spacing";
 @use "typography";
 @use "containers";
 @use "buttons";
@@ -15,4 +16,10 @@ main {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.main-page {
+  footer {
+    margin-top: 20px;
+  }
 }

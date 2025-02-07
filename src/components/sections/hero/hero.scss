@@ -1,3 +1,5 @@
+@import "../../../styles/breakpoints";
+
 .hero {
   &__container {
     &.hero__default {
@@ -24,17 +26,22 @@
     }
   }
   &__text {
-    padding: 120px 370px 120px 72px;
+    padding: var(--spacing-xxl) calc(var(--spacing-xxl) * 3) var(--spacing-xxl) var(--spacing-xl);
     display: flex;
     flex-direction: column;
     gap: 40px;
+    
+    @include md {
+      padding: 30px;
+    }
+    
     h1 em {
       font-style: italic;
       font-weight: var(--weight-medium);
     }
   }
   &__description {
-    width: 450px;
+    max-width: 450px;
     color: var(--text-secondary);
   }
 }

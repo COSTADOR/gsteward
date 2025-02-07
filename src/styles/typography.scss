@@ -1,3 +1,5 @@
+@import "./breakpoints";
+
 @import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap");
 
 :root {
@@ -27,6 +29,18 @@
   --weight-medium: 500;
   --weight-semibold: 600;
   --weight-bold: 700;
+}
+
+@include lg {
+  :root {
+    --title-xxl: 52px;
+    --title-xl: 42px;
+    --title-lg: 38px;
+    
+    --body-lg: 18px;
+    --body-md: 16px;
+    --body-sm: 14px;
+  }
 }
 
 body {

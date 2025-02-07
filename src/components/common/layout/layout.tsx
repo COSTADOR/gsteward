@@ -4,11 +4,12 @@ import Footer from "../footer/footer"
 import "./layout.scss"
 
 interface LayoutProps {
-  children: ReactNode
+  children: ReactNode;
+  className?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => (
-  <div className="layout">
+const Layout: React.FC<LayoutProps> = ({ children, className }) => (
+  <div className={`layout ${className || ""}`}>
     <Header />
     <main>{children}</main>
     <Footer />

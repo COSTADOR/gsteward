@@ -2,7 +2,7 @@
 
 .features {
   &__container {
-    padding: 80px;
+    padding: var(--spacing-xl);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -21,12 +21,12 @@
     width: 100%;
     gap: 24px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    @include mobile {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    @include lg {
+      grid-template-columns: 1fr 1fr;
     }
-    @include desktop {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+    @include md {
+      grid-template-columns: 1fr;
     }
   }
   &__item {
