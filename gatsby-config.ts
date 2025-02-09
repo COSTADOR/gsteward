@@ -27,15 +27,29 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `GSteward`,
+        short_name: `GSteward`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `static/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `static/images/favicon.svg`,
+        icons: [
+          {
+            src: `static/images/web-app-manifest-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+            purpose: `maskable`
+          },
+          {
+            src: `static/images/web-app-manifest-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+            purpose: `maskable`
+          }
+        ],
       },
     },
   ],
