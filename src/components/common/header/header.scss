@@ -89,6 +89,14 @@
     }
   }
   
+  &__burger-icon {
+    display: block;
+  }
+  
+  &__close-icon {
+    display: none;
+  }
+  
   @include lg {
     &__logo-image {
       transform: scale(0.5);
@@ -142,9 +150,18 @@
       }
     }
     
-    /* Чекбокс-контроль для показа меню */
     #menu-toggle:checked ~ .header__nav {
       transform: translateY(0);
+    }
+    
+    #menu-toggle:checked + .header__burger {
+      .header__burger-icon {
+        display: none;
+      }
+      
+      .header__close-icon {
+        display: block;
+      }
     }
   }
 }
