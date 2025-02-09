@@ -1,23 +1,19 @@
 import React from "react"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import "./service-card.scss"
 
 interface ServiceCardProps {
   title: string
   description: string
   tags: string[]
-  image: string
+  image: IGatsbyImageData
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({
-  title,
-  description,
-  tags,
-  image,
-}) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, tags, image }) => {
   return (
     <div className="service-card">
       <div className="service-card__image">
-        <img src={image} alt={title} />
+        <GatsbyImage image={image} alt={title} className="service-card__image-content" />
       </div>
       <div className="service-card__content">
         <h3 className="service-card__title">{title}</h3>

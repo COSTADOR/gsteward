@@ -27,8 +27,8 @@
       font-weight: var(--weight-medium);
     }
   }
-
-  img {
+  
+  &__image {
     max-width: 100%;
     object-fit: cover;
     position: absolute;

@@ -1,25 +1,42 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import "./main-services.scss"
 
-const services = [
-  {
-    title: "Janitorial",
-    description:
-      "Our professional janitorial services ensure your business maintains a clean, hygienic, and welcoming environment.",
-    image: "/images/janitorial.jpg",
-    link: "/janitorial/",
-  },
-  {
-    title: "Maintenance",
-    description:
-      "Our maintenance solutions help keep your facilities running smoothly, from repairs to preventative care.",
-    image: "/images/maintenance.jpg",
-    link: "/maintenance/",
-  },
-]
-
 const MainServices: React.FC = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      janitorialImage: file(relativePath: { eq: "janitorial.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(width: 700, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 90)
+        }
+      }
+      maintenanceImage: file(relativePath: { eq: "maintenance.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(width: 700, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 90)
+        }
+      }
+    }
+  `)
+  
+  const services = [
+    {
+      title: "Janitorial",
+      description:
+        "Our professional janitorial services ensure your business maintains a clean, hygienic, and welcoming environment.",
+      image: getImage(data.janitorialImage),
+      link: "/janitorial/",
+    },
+    {
+      title: "Maintenance",
+      description:
+        "Our maintenance solutions help keep your facilities running smoothly, from repairs to preventative care.",
+      image: getImage(data.maintenanceImage),
+      link: "/maintenance/",
+    },
+  ]
+  
   return (
     <section id="main-services" className="main-services">
       <div className="main-services__container container">
@@ -36,7 +53,7 @@ const MainServices: React.FC = () => {
           {services.map((service, index) => (
             <div key={index} className="main-services__item">
               <div className="main-services__image">
-                <img src={service.image} alt={service.title} />
+                <GatsbyImage image={service.image!} alt={service.title} className="main-services__image-content" />
               </div>
               <div className="main-services__item--content">
                 <h2 className="main-services__heading">{service.title}</h2>

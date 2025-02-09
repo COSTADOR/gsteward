@@ -1,4 +1,6 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import "./steps.scss"
 import { Link } from "gatsby"
 
@@ -24,6 +26,16 @@ const steps = [
 ]
 
 const Steps: React.FC = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      stepsImage: file(relativePath: { eq: "steps-image.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(width: 600, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 90)
+        }
+      }
+    }
+  `)
+  
   return (
     <section className="steps">
       <div className="steps__container container">
@@ -55,7 +67,11 @@ const Steps: React.FC = () => {
             </Link>
           </div>
           <div className="steps__image">
-            <img src="/images/steps-image.jpg" alt="worker" />
+            <GatsbyImage
+              image={getImage(data.stepsImage)!}
+              alt="Worker"
+              className="steps__image-content"
+            />
           </div>
         </div>
       </div>

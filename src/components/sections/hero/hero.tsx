@@ -1,11 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
+import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image"
 import "./hero.scss"
 
 interface HeroProps {
   title: string
   description: string
-  imgUrl: string
+  imgData: IGatsbyImageData // Используем оптимизированное изображение Gatsby
   showServicesButton?: boolean
   backgroundClass?: string
 }
@@ -18,16 +19,16 @@ const scrollToServices = () => {
 }
 
 const Hero: React.FC<HeroProps> = ({
-  title,
-  description,
-  imgUrl,
-  showServicesButton = false,
-  backgroundClass = "hero__default",
-}) => {
+                                     title,
+                                     description,
+                                     imgData,
+                                     showServicesButton = false,
+                                     backgroundClass = "hero__default",
+                                   }) => {
   return (
     <section className="hero">
       <div className={`hero__container container ${backgroundClass}`}>
-        <img src={imgUrl} alt="hero photo section" className="hero__image" />
+        <GatsbyImage image={getImage(imgData)!} alt="hero photo section" className="hero__image" />
         <div className="hero__text">
           <h1
             className="title-xl"

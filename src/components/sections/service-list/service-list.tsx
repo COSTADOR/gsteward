@@ -1,12 +1,13 @@
 import React from "react"
 import ServiceCard from "../service-card/service-card"
 import "./service-list.scss"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 
 interface Service {
   title: string
   description: string
   tags: string[]
-  image: string
+  image: IGatsbyImageData
 }
 
 interface ServiceListProps {
