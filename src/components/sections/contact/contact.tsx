@@ -6,8 +6,8 @@ import { center, containerStyle, G_API_KEY, mapStyles } from "../../../constants
 import { CONTACT_INFO } from "../../../constants/contacts.const"
 
 const markers = [
-  { lat: 33.195869, lng: -117.379483 },
-  { lat: 33.017258, lng: -117.074565 },
+  { lat: 33.022137006444524, lng: -117.08270008686802 },
+  { lat: 33.19030419963578, lng: -117.32834495352454 },
 ]
 
 const Contact: React.FC = () => {
