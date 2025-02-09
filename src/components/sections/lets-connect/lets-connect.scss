@@ -8,6 +8,7 @@
     gap: 56px;
     @include md {
       flex-direction: column;
+      padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-xl);
     }
   }
   &__title {

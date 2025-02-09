@@ -5,6 +5,9 @@
 
   &__container {
     margin-top: var(--spacing-xxl);
+    @include md {
+      margin-top: var(--spacing-xl);
+    }
   }
 
   &__header {

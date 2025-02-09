@@ -1,6 +1,7 @@
 import * as React from "react"
 import "./footer.scss"
 import { Link } from "gatsby"
+import { CONTACT_INFO } from "../../../constants/contacts.const"
 
 const Footer = () => (
   <footer className="footer">
@@ -39,14 +40,11 @@ const Footer = () => (
           </div>
           <div className="footer__section">
             <h3 className="footer__title">CONTACT US</h3>
+            {CONTACT_INFO.addresses.map((address, index) => (
+              <p key={index} className="footer__text">{address}</p>
+            ))}
             <p className="footer__text">
-              2103 S El Camino Real #105C, Oceanside, CA 92054
-            </p>
-            <p className="footer__text">
-              1440 W. Bernardo Court #300, San Diego, CA 92127
-            </p>
-            <p className="footer__text">
-              <a href="tel:+18583797770">+1 (858)-379-7770</a>
+              <a href={CONTACT_INFO.phoneHref}>{CONTACT_INFO.phone}</a>
             </p>
           </div>
         </div>

@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import "./lets-connect.scss"
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"
-import { center, containerStyle, G_API_KEY, mapStyles } from "../../../constants/contact.const"
+import { center, containerStyle, G_API_KEY, mapStyles } from "../../../constants/map.const"
+import { CONTACT_INFO } from "../../../constants/contacts.const"
 
 const markers = [
   { lat: 33.195869, lng: -117.379483 },
@@ -29,26 +29,27 @@ const LetsConnect: React.FC = () => {
               Call us directly to discuss your cleaning needs or to schedule a
               consultation
             </p>
-            <p className="lets-connect__text">+1 (858)-379-7770</p>
+            <p className="lets-connect__text">{CONTACT_INFO.phone}</p>
             <hr className="lets-connect__divider" />
             <p className="lets-connect__content-title">San Diego Office</p>
-            <p className="lets-connect__text">
-              1400 Bernardo Court #300, San Diego, CA 92127
-            </p>
+            <p className="lets-connect__text">{CONTACT_INFO.addresses[0]}</p>
             <hr className="lets-connect__divider" />
             <p className="lets-connect__content-title">North County Office</p>
-            <p className="lets-connect__text">
-              2103 S. El Camino Real, Oceanside, CA 92054
-            </p>
+            <p className="lets-connect__text">{CONTACT_INFO.addresses[1]}</p>
             <hr className="lets-connect__divider" />
             <p className="lets-connect__content-title">Email</p>
-            <p className="lets-connect__text">goodsteward@gmail.com</p>
+            <p className="lets-connect__text">{CONTACT_INFO.email}</p>
             <hr className="lets-connect__divider" />
-            <p className="lets-connect__content-title">Available Monday to Friday, 9 AM - 6 PM PST</p>
+            <p className="lets-connect__content-title">
+              Available Monday to Friday, 9 AM - 6 PM PST
+            </p>
           </div>
           <div className="lets-connect__buttons">
-            <a href="tel:+18583797770" className="button button--primary with-icon">
-              1 (858)-379-7770
+            <a
+              href={CONTACT_INFO.phoneHref}
+              className="button button--primary with-icon"
+            >
+              {CONTACT_INFO.phone}
             </a>
           </div>
         </div>

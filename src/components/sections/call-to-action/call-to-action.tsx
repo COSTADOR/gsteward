@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import "./call-to-action.scss"
+import { CONTACT_INFO } from "../../../constants/contacts.const"
 
 interface CtaServicesProps {
   title: string
@@ -19,8 +20,8 @@ const CtaServices: React.FC<CtaServicesProps> = ({ title, description, phone }) 
         />
         <div className="cta__buttons">
           {phone ? (
-            <a href="tel:+18583797770" className="button button--primary with-icon">
-              1 (858)-379-7770
+            <a href={CONTACT_INFO.phoneHref} className="button button--primary with-icon">
+              {CONTACT_INFO.phone}
             </a>
           ) : (
             <Link to="/contact-us" className="button button--primary with-icon">
