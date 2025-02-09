@@ -9,7 +9,7 @@
  */
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://blabla.io/`,
+    siteUrl: `https://www.gsteward.com/`,
   },
   plugins: [
     `gatsby-plugin-image`,

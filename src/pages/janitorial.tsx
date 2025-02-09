@@ -199,4 +199,21 @@ const Janitorial = () => {
   )
 }
 
+export const Head = () => (
+  <>
+    <title>Janitorial Services - Good Steward Cleaning</title>
+    <meta name="description" content="Professional janitorial services to keep your business clean, hygienic, and welcoming. From routine cleaning to deep sanitation, we’ve got you covered." />
+    <meta property="og:title" content="Janitorial Services - Good Steward Cleaning" />
+    <meta property="og:description" content="Professional janitorial services to keep your business clean, hygienic, and welcoming. From routine cleaning to deep sanitation, we’ve got you covered." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/logo.svg" />
+    <meta property="og:url" content="https://www.gsteward.com/janitorial" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Janitorial Services - Good Steward Cleaning" />
+    <meta name="twitter:description" content="Keep your commercial space spotless with our professional janitorial services." />
+    <meta name="twitter:image" content="/images/logo.svg" />
+    <link rel="canonical" href="https://www.gsteward.com/janitorial" />
+  </>
+)
+
 export default Janitorial
