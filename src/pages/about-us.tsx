@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/common/layout/layout"
 import Steps from "../components/sections/steps/steps"
 import Features from "../components/sections/features/features"
@@ -17,7 +16,7 @@ const ctaDescription = `Experience the difference with a team that values your t
 
 const AboutUs = () => (
   <Layout>
-    <Hero title={title} description={description} backgroundClass={'hero__about-us'}/>
+    <Hero title={title} description={description} imgUrl={'/images/hero-about-us.jpg'} backgroundClass={'hero__about-us'}/>
     <CoreValues></CoreValues>
     <Steps></Steps>
     <Features></Features>

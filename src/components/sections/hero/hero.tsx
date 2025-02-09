@@ -5,6 +5,7 @@ import "./hero.scss"
 interface HeroProps {
   title: string
   description: string
+  imgUrl: string
   showServicesButton?: boolean
   backgroundClass?: string
 }
@@ -17,14 +18,16 @@ const scrollToServices = () => {
 }
 
 const Hero: React.FC<HeroProps> = ({
-                                     title,
-                                     description,
-                                     showServicesButton = false,
-                                     backgroundClass = "hero__default"
-                                   }) => {
+  title,
+  description,
+  imgUrl,
+  showServicesButton = false,
+  backgroundClass = "hero__default",
+}) => {
   return (
     <section className="hero">
       <div className={`hero__container container ${backgroundClass}`}>
+        <img src={imgUrl} alt="hero photo section" className="hero__image" />
         <div className="hero__text">
           <h1
             className="title-xl"
@@ -36,7 +39,10 @@ const Hero: React.FC<HeroProps> = ({
               Contact Us
             </Link>
             {showServicesButton && (
-              <button onClick={scrollToServices} className="button button--secondary">
+              <button
+                onClick={scrollToServices}
+                className="button button--secondary"
+              >
                 Explore Services →
               </button>
             )}

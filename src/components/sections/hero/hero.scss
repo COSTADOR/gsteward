@@ -1,47 +1,50 @@
-@import "../../../styles/breakpoints";
+@use "../../../styles/mixins" as *;
 
 .hero {
   &__container {
-    &.hero__default {
-      background: linear-gradient(
-              to right,
-              rgba(255, 255, 255, 1) 35%,
-              rgba(255, 255, 255, 0) 60%
-      ),
-      url("../../../../static/images/hero-main.jpg");
-      background-size: auto 100%;
-      background-position: 100%;
-      background-repeat: no-repeat;
-    }
-    &.hero__about-us {
-      background: linear-gradient(
-              to right,
-              rgba(255, 255, 255, 1) 40%,
-              rgba(255, 255, 255, 0) 75%
-      ),
-      url("../../../../static/images/hero-about-us.jpg");
-      background-size: auto 100%;
-      background-position: 100%;
-      background-repeat: no-repeat;
-    }
+    position: relative;
   }
   &__text {
-    padding: var(--spacing-xxl) calc(var(--spacing-xxl) * 3) var(--spacing-xxl) var(--spacing-xl);
+    padding: var(--spacing-xxl) calc(var(--spacing-xxl) * 3) var(--spacing-xxl)
+      var(--spacing-xl);
     display: flex;
     flex-direction: column;
     gap: 40px;
-    
+    background-size: auto 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1) 35%,
+        rgba(255, 255, 255, 0) 60%
+      )
+      no-repeat 100%;
+
     @include md {
       padding: 30px;
     }
-    
+
     h1 em {
       font-style: italic;
       font-weight: var(--weight-medium);
     }
   }
+
+  img {
+    max-width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    @include sm {
+      position: relative;
+    }
+  }
   &__description {
-    max-width: 450px;
+    max-width: 50%;
     color: var(--text-secondary);
+    @include sm {
+      max-width: 100%;
+    }
   }
 }

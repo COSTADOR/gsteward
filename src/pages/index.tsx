@@ -16,7 +16,7 @@ const description = `From offices to commercial spaces, our professional cleanin
 
 const IndexPage = () => (
   <Layout className={'main-page'}>
-    <Hero title={title} description={description} showServicesButton={true}/>
+    <Hero title={title} description={description} showServicesButton={true} imgUrl={'/images/hero-main.jpg'}/>
     <Steps />
     <Features />
     <Stats />

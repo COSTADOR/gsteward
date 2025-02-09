@@ -1,4 +1,4 @@
-@import "../../../styles/breakpoints";
+@use "../../../styles/mixins" as *;
 
 .features {
   &__container {

@@ -1,9 +1,14 @@
+@use "../../../styles/mixins" as *;
+
 .lets-connect {
   &__container {
     border-radius: 20px;
     padding: var(--spacing-xxl) var(--spacing-xl) var(--spacing-xl);
     display: flex;
     gap: 56px;
+    @include md {
+      flex-direction: column;
+    }
   }
   &__title {
     em {
@@ -29,6 +34,11 @@
     flex: 5;
     border-radius: 16px;
     overflow: hidden;
+    
+    @include md {
+      flex: auto;
+      height: 400px;
+    }
   }
   &__content-title {
     color: var(--text-secondary);

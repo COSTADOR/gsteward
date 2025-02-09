@@ -1,4 +1,4 @@
-@import "../../../styles/breakpoints";
+@use "../../../styles/mixins" as *;
 
 .core-values {
 	&__container {

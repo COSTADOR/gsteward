@@ -1,4 +1,4 @@
-@import "../../../styles/breakpoints";
+@use "../../../styles/mixins" as *;
 
 .header {
   background-color: var(--surface);
