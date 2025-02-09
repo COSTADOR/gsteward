@@ -41,6 +41,12 @@
       width: 100%;
     }
   }
+  .gatsby-image-wrapper {
+    position: absolute;
+    @include sm {
+      position: relative;
+    }
+  }
   &__description {
     max-width: 50%;
     color: var(--text-secondary);
