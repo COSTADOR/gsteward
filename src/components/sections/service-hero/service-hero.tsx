@@ -35,10 +35,9 @@ const ServiceHero: React.FC<ServiceHeroProps> = ({
           ))}
         </div>
         <div className="service-hero__cta">
-          <div>
-            Let’s get started on your cleaning project—click to request your
-            personalized quote!
-          </div>
+          <p>
+            Let’s get started on your cleaning project—contact us today for your personalized quote!
+          </p>
           <Link to="/contact-us" className="button button--primary with-icon">
             Contact Us
           </Link>

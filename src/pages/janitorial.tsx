@@ -190,7 +190,7 @@ const Janitorial = () => {
       <ServiceHero
         subtitle="Professional Janitorial Services"
         title="Janitorial"
-        description="Our professional janitorial services ensure your business maintains a clean, hygienic, and welcoming environment. From routine cleaning to tackling tough messes, we’ve got you covered."
+        description="Our professional janitorial services ensure your business maintains a clean, hygienic, and welcoming environment. From routine cleaning to tackling tough messes, we’ve got you covered. We specialize in private schools, office buildings, medical offices, and gym facilities."
         stats={janitorialStats}
       />
       <ServiceList services={services} />
