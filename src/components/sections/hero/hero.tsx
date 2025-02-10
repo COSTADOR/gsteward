@@ -6,7 +6,7 @@ import "./hero.scss"
 interface HeroProps {
   title: string
   description: string
-  imgData: IGatsbyImageData // Используем оптимизированное изображение Gatsby
+  imgData: IGatsbyImageData
   showServicesButton?: boolean
   backgroundClass?: string
 }
@@ -31,7 +31,7 @@ const Hero: React.FC<HeroProps> = ({
         <GatsbyImage image={getImage(imgData)!} alt="hero photo section" className="hero__image" />
         <div className="hero__text">
           <h1
-            className="title-xl"
+            className="title-xl hero__title"
             dangerouslySetInnerHTML={{ __html: title }}
           />
           <p className="hero__description">{description}</p>

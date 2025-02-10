@@ -112,12 +112,6 @@ const Maintenance = () => {
     },
   ]
   
-  const maintenanceStats = [
-    { number: "1,650+", label: "Facilities Cleaned" },
-    { number: "18", label: "Years of Service" },
-    { number: "98%", label: "Satisfaction Rate" },
-  ]
-  
   const ctaTitle = `Need reliable maintenance services?`
   const ctaDescription = `Let us take care of your property’s maintenance needs. Contact us today for <br/>a consultation or to request a free quote.`
   
@@ -127,7 +121,6 @@ const Maintenance = () => {
         subtitle="Professional Maintenance Services"
         title="Maintenance"
         description="At Steward Cleaning, we provide a full range of services to keep your property in top condition. From minor repairs to major renovations, our team ensures your space is safe, functional, and always at its best."
-        stats={maintenanceStats}
       />
       <ServiceList services={services} />
       <CallToAction title={ctaTitle} description={ctaDescription} />

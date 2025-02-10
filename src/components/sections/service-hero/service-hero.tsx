@@ -6,17 +6,12 @@ interface ServiceHeroProps {
   subtitle: string
   title: string
   description: string
-  stats: {
-    number: string
-    label: string
-  }[]
 }
 
 const ServiceHero: React.FC<ServiceHeroProps> = ({
   subtitle,
   title,
   description,
-  stats,
 }) => {
   return (
     <section className="service-hero">
@@ -26,17 +21,17 @@ const ServiceHero: React.FC<ServiceHeroProps> = ({
           <h1 className="service-hero__title title-xxl">{title}</h1>
           <p className="service-hero__description">{description}</p>
         </div>
-        <div className="service-hero__stats">
-          {stats.map((stat, index) => (
-            <div key={index} className="service-hero__stat">
-              <span className="service-hero__stat-number">{stat.number}</span>
-              <span className="service-hero__stat-label">{stat.label}</span>
-            </div>
-          ))}
-        </div>
+        {/*<div className="service-hero__stats">*/}
+        {/*  {stats.map((stat, index) => (*/}
+        {/*    <div key={index} className="service-hero__stat">*/}
+        {/*      <span className="service-hero__stat-number">{stat.number}</span>*/}
+        {/*      <span className="service-hero__stat-label">{stat.label}</span>*/}
+        {/*    </div>*/}
+        {/*  ))}*/}
+        {/*</div>*/}
         <div className="service-hero__cta">
           <p>
-            Let’s get started on your cleaning project—contact us today for your personalized quote!
+            Let’s get started on your cleaning project — contact us today for your personalized quote!
           </p>
           <Link to="/contact-us" className="button button--primary with-icon">
             Contact Us

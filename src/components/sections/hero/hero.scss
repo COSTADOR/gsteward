@@ -47,6 +47,14 @@
       position: relative;
     }
   }
+  &__title {
+    @include md {
+      max-width: 60%;
+    }
+    @include sm {
+      max-width: 100%;
+    }
+  }
   &__description {
     max-width: 50%;
     color: var(--text-secondary);

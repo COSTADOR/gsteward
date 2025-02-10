@@ -176,12 +176,6 @@ const Janitorial = () => {
     },
   ]
   
-  const janitorialStats = [
-    { number: "1,650+", label: "Facilities Cleaned" },
-    { number: "18", label: "Years of Service" },
-    { number: "98%", label: "Satisfaction Rate" },
-  ]
-  
   const ctaTitle = `Not sure what service you need?`
   const ctaDescription = `Let us help you find the perfect cleaning solution for your business. Get in touch today<br/> to schedule a consultation or request a free quote.`
   
@@ -191,7 +185,6 @@ const Janitorial = () => {
         subtitle="Professional Janitorial Services"
         title="Janitorial"
         description="Our professional janitorial services ensure your business maintains a clean, hygienic, and welcoming environment. From routine cleaning to tackling tough messes, we’ve got you covered. We specialize in private schools, office buildings, medical offices, and gym facilities."
-        stats={janitorialStats}
       />
       <ServiceList services={services} />
       <CallToAction title={ctaTitle} description={ctaDescription} />
