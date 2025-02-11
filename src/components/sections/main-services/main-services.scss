@@ -13,6 +13,11 @@
     font-size: var(--subtitle);
     text-transform: uppercase;
   }
+  &__title {
+    em {
+      font-weight: var(--weight-medium);
+    }
+  }
   &__description {
     color: var(--text-secondary);
     font-size: var(--body-sm);

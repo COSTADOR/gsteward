@@ -50,6 +50,9 @@
       font-size: 84px;
       color: var(--primary-50);
       width: 100px;
+      @include sm {
+        font-size: 56px;
+      }
     }
     &--content {
       flex: 1;

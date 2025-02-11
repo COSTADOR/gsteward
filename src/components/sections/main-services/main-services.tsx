@@ -44,11 +44,11 @@ const MainServices: React.FC = () => {
         <h2 className="main-services__title title-lg">
           Tailored cleaning solutions for <em>every need</em>
         </h2>
-        <div className="main-services__description">
+        <p className="main-services__description">
           Discover cleaning solutions tailored to your business. From routine
           janitorial services to specialized deep cleaning, we deliver unmatched
           quality every time.
-        </div>
+        </p>
         <div className="main-services__content">
           {services.map((service, index) => (
             <div key={index} className="main-services__item">

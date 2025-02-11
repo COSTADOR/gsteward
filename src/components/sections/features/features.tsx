@@ -77,10 +77,10 @@ const Features: React.FC = () => {
         <h2 className="features__title title-lg">
           Why choose Good Steward cleaning?
         </h2>
-        <div className="features__description">
+        <p className="features__description">
           Our commitment to quality and personalized service makes us stand out
           in the industry.
-        </div>
+        </p>
         <Link
           to="/contact-us"
           className="button button--secondary with-icon icon-right"

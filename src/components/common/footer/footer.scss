@@ -45,4 +45,10 @@
     margin-bottom: 10px;
     line-height: 1.5;
   }
+  
+  &__list li a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

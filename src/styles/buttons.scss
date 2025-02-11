@@ -13,11 +13,17 @@
     background: var(--black);
     color: var(--text-white);
     box-shadow: 0 2px 48px rgba(102, 107, 125, 0.12);
+    &:hover {
+      background: var(--text-primary-hover);
+    }
   }
 
   &--secondary {
     background: transparent;
     color: var(--text-primary);
+    &:hover {
+      color: var(--text-primary-hover);
+    }
   }
 
   &--icon {
