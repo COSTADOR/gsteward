@@ -3,6 +3,11 @@ export const center = {
   lng: -117.226024,
 }
 
+export const markers = [
+  { lat: 33.022137006444524, lng: -117.08270008686802 },
+  { lat: 33.19030419963578, lng: -117.32834495352454 },
+]
+
 export const G_API_KEY = "AIzaSyAYYtcs0jTI12bREgBBmVvlLFy0avIRNvU"
 
 export const containerStyle = {

@@ -2,13 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import "./contact.scss"
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"
-import { center, containerStyle, G_API_KEY, mapStyles } from "../../../constants/map.const"
+import { center, containerStyle, G_API_KEY, mapStyles, markers } from "../../../constants/map.const"
 import { CONTACT_INFO } from "../../../constants/contacts.const"
-
-const markers = [
-  { lat: 33.022137006444524, lng: -117.08270008686802 },
-  { lat: 33.19030419963578, lng: -117.32834495352454 },
-]
 
 const Contact: React.FC = () => {
   return (

@@ -1,13 +1,8 @@
 import React from "react"
 import "./lets-connect.scss"
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"
-import { center, containerStyle, G_API_KEY, mapStyles } from "../../../constants/map.const"
+import { center, containerStyle, G_API_KEY, mapStyles, markers } from "../../../constants/map.const"
 import { CONTACT_INFO } from "../../../constants/contacts.const"
-
-const markers = [
-  { lat: 33.195869, lng: -117.379483 },
-  { lat: 33.017258, lng: -117.074565 },
-]
 
 const LetsConnect: React.FC = () => {
   return (
