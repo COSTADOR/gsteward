@@ -1,11 +1,30 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import "./contact.scss"
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"
-import { center, containerStyle, G_API_KEY, mapStyles, markers } from "../../../constants/map.const"
+import { GoogleMap, LoadScript } from "@react-google-maps/api"
+import {
+  center,
+  containerStyle,
+  G_API_KEY,
+  mapStyles,
+  markers,
+} from "../../../constants/map.const"
 import { CONTACT_INFO } from "../../../constants/contacts.const"
 
 const Contact: React.FC = () => {
+  const mapRef = useRef<google.maps.Map | null>(null)
+
+  useEffect(() => {
+    if (mapRef.current) {
+      markers.forEach(marker => {
+        new google.maps.marker.AdvancedMarkerElement({
+          map: mapRef.current!,
+          position: { lat: marker.lat, lng: marker.lng },
+        })
+      })
+    }
+  }, [])
+
   return (
     <section className="contact">
       <div className="contact__container container">
@@ -38,14 +57,10 @@ const Contact: React.FC = () => {
               center={center}
               zoom={10}
               options={{ styles: mapStyles }}
-            >
-              {markers.map((marker, index) => (
-                <Marker
-                  key={index}
-                  position={{ lat: marker.lat, lng: marker.lng }}
-                />
-              ))}
-            </GoogleMap>
+              onLoad={map => {
+                mapRef.current = map
+              }}
+            />
           </LoadScript>
         </div>
       </div>
