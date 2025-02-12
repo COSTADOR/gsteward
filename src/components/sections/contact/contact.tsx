@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
         <div className="contact__map">
-          <LoadScript googleMapsApiKey={G_API_KEY}>
+          <LoadScript googleMapsApiKey={G_API_KEY || ""}>
             <GoogleMap
               mapContainerStyle={containerStyle}
               center={center}

@@ -49,7 +49,7 @@ const LetsConnect: React.FC = () => {
           </div>
         </div>
         <div className="lets-connect__map">
-          <LoadScript googleMapsApiKey={G_API_KEY}>
+          <LoadScript googleMapsApiKey={G_API_KEY || ""}>
             <GoogleMap
               mapContainerStyle={containerStyle}
               center={center}

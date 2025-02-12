@@ -8,7 +8,7 @@ export const markers = [
   { lat: 33.19030419963578, lng: -117.32834495352454 },
 ]
 
-export const G_API_KEY = "AIzaSyAYYtcs0jTI12bREgBBmVvlLFy0avIRNvU"
+export const G_API_KEY = process.env.GATSBY_GOOGLE_MAPS_API_KEY;
 
 export const containerStyle = {
   width: "100%",
