@@ -12,7 +12,7 @@ const AboutUs = () => {
     query {
       heroImage: file(relativePath: { eq: "hero-about-us.jpg" }) {
         childImageSharp {
-          gatsbyImageData(width: 970, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED)
+          gatsbyImageData(width: 970, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 65)
         }
       }
     }

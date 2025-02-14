@@ -9,12 +9,12 @@ const MainServices: React.FC = () => {
     query {
       janitorialImage: file(relativePath: { eq: "janitorial.jpg" }) {
         childImageSharp {
-          gatsbyImageData(width: 700, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 90)
+          gatsbyImageData(width: 700, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 70)
         }
       }
       maintenanceImage: file(relativePath: { eq: "maintenance.jpg" }) {
         childImageSharp {
-          gatsbyImageData(width: 700, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 90)
+          gatsbyImageData(width: 700, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 70)
         }
       }
     }

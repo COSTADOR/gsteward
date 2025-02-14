@@ -12,7 +12,7 @@ const IndexPage = () => {
     query {
       heroImage: file(relativePath: { eq: "hero-main.jpg" }) {
         childImageSharp {
-          gatsbyImageData(width: 940, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 80)
+          gatsbyImageData(width: 940, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 65)
         }
       }
     }

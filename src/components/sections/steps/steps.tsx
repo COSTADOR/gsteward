@@ -30,7 +30,7 @@ const Steps: React.FC = () => {
     query {
       stepsImage: file(relativePath: { eq: "steps-image.jpg" }) {
         childImageSharp {
-          gatsbyImageData(width: 600, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 90)
+          gatsbyImageData(width: 600, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 65)
         }
       }
     }
