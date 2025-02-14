@@ -26,6 +26,7 @@ const Header: React.FC = () => {
 
   return (
     <header className={`header ${isScrolled ? "is-scrolled" : ""}`}>
+      <div className="header__background"></div>
       <div className="header__container container">
         <Link to="/" className="header__logo">
           <img

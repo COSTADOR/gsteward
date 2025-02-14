@@ -1,12 +1,25 @@
 @use "../../../styles/mixins" as *;
 
 .header {
-  background-color: var(--surface);
   position: sticky;
   top: 0;
   z-index: 9;
+  
+  &__background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
 
   &__container {
+    position: relative;
+    z-index: 99;
     height: 80px;
     display: flex;
     align-items: center;
