@@ -7,6 +7,9 @@
   padding: 30px;
   &__container {
     padding: 0 var(--spacing-xl);
+    @include sm {
+      padding: 0;
+    }
   }
   &__logo {
     &-image {

@@ -42,7 +42,7 @@ const Hero: React.FC<HeroProps> = ({
             {showServicesButton && (
               <button
                 onClick={scrollToServices}
-                className="button button--secondary"
+                className="button button--secondary button--services"
               >
                 Explore Services →
               </button>

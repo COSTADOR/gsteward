@@ -1,3 +1,5 @@
+@use "../../../styles/mixins" as *;
+
 .cta {
   background: radial-gradient(circle, #38acd6 0%, transparent 50%),
     linear-gradient(
@@ -11,6 +13,9 @@
     );
   &__container {
     padding: 96px;
+    @include sm {
+      padding: 36px;
+    }
     text-align: center;
     color: var(--text-white);
   }
