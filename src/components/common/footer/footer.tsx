@@ -50,7 +50,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="footer__bottom">
-        &copy; {new Date().getFullYear()} Steward Cleaning. All Rights Reserved.
+        &copy; {new Date().getFullYear()} Good Steward Cleaning. All Rights Reserved.
       </div>
     </div>
   </footer>

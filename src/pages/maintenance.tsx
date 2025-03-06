@@ -120,7 +120,7 @@ const Maintenance = () => {
       <ServiceHero
         subtitle="Professional Maintenance Services"
         title="Maintenance"
-        description="At Steward Cleaning, we provide a full range of services to keep your property in top condition. From minor repairs to major renovations, our team ensures your space is safe, functional, and always at its best."
+        description="At Good Steward Cleaning, we provide a full range of services to keep your property in top condition. From minor repairs to major renovations, our team ensures your space is safe, functional, and always at its best."
       />
       <ServiceList services={services} />
       <CallToAction title={ctaTitle} description={ctaDescription} />

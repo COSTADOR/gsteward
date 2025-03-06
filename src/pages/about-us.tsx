@@ -20,9 +20,9 @@ const AboutUs = () => {
     
     const title = `Committed to quality,
               <br /> ⎯ <em>backed by experience</em>`
-    const description = `Steward Cleaning isn’t just a cleaning company — it’s a team of professionals dedicated to delivering exceptional results. We pride ourselves on our attention to detail, commitment to quality, and focus on building long-term relationships with our clients.`
+    const description = `Good Steward Cleaning isn’t just a cleaning company — it’s a team of professionals dedicated to delivering exceptional results. We pride ourselves on our attention to detail, commitment to quality, and focus on building long-term relationships with our clients.`
     
-    const ctaTitle = `Ready to Partner with Steward Cleaning?`
+    const ctaTitle = `Ready to Partner with Good Steward Cleaning?`
     const ctaDescription = `Experience the difference with a team that values your trust, prioritizes quality, and always<br/> delivers on its promises. Let’s build a cleaner, healthier environment for your business.`
     
     return (
