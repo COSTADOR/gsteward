@@ -15,7 +15,7 @@ export const onRenderBody: GatsbySSR["onRenderBody"] = ({ setHeadComponents, set
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NFQCX96M');`,
+})(window,document,'script','dataLayer','GTM-TBWJGZTK');`,
       }}
     />,
   ]);
@@ -25,7 +25,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       key="gtm-body11"
       dangerouslySetInnerHTML={{
         __html: `<iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-NFQCX96M"
+          src="https://www.googletagmanager.com/ns.html?id=GTM-TBWJGZTK"
           height="0"
           width="0"
           style="display:none;visibility:hidden">
