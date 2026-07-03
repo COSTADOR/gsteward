@@ -16,16 +16,16 @@ const ContactUs = () => (
 
 export const Head = () => (
   <>
-      <title>Contact Us - Good Steward Cleaning</title>
-      <meta name="description" content={`Have questions about our services? Contact Good Steward Cleaning today! Call us at ${CONTACT_INFO.phone} or visit our San Diego and Oceanside offices.`} />
-      <meta property="og:title" content="Contact Us - Good Steward Cleaning" />
-      <meta property="og:description" content={`Have questions about our services? Contact Good Steward Cleaning today! Call us at ${CONTACT_INFO.phone} or visit our San Diego and Oceanside offices.`} />
+      <title>Contact Us | Good Steward Cleaning – San Diego & Oceanside</title>
+      <meta name="description" content={`Contact Good Steward Cleaning for commercial & office cleaning in San Diego & Oceanside. Call ${CONTACT_INFO.phone} for a free on-site walkthrough & quote.`} />
+      <meta property="og:title" content="Contact Us | Good Steward Cleaning – San Diego & Oceanside" />
+      <meta property="og:description" content={`Contact Good Steward Cleaning for commercial & office cleaning in San Diego & Oceanside. Call ${CONTACT_INFO.phone} for a free on-site walkthrough & quote.`} />
       <meta property="og:type" content="website" />
       <meta property="og:image" content="/images/logo.svg" />
       <meta property="og:url" content="https://www.gsteward.com/contact-us" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Contact Us - Good Steward Cleaning" />
-      <meta name="twitter:description" content={`Get in touch with Good Steward Cleaning for professional janitorial and maintenance services. Call us at ${CONTACT_INFO.phone}`} />
+      <meta name="twitter:title" content="Contact Us | Good Steward Cleaning – San Diego & Oceanside" />
+      <meta name="twitter:description" content={`Contact Good Steward Cleaning for commercial & office cleaning in San Diego & Oceanside. Call ${CONTACT_INFO.phone} for a free on-site walkthrough & quote.`} />
       <meta name="twitter:image" content="/images/logo.svg" />
       <link rel="canonical" href="https://www.gsteward.com/contact-us" />
   </>
