@@ -130,16 +130,16 @@ const Maintenance = () => {
 
 export const Head = () => (
   <>
-    <title>Maintenance Services - Good Steward Cleaning</title>
-    <meta name="description" content="Professional maintenance services to keep your property in top condition. From minor repairs to major renovations, our team ensures your space is safe, functional, and at its best." />
-    <meta property="og:title" content="Maintenance Services - Good Steward Cleaning" />
-    <meta property="og:description" content="Professional maintenance services to keep your property in top condition. From minor repairs to major renovations, our team ensures your space is safe, functional, and at its best." />
+    <title>Commercial Property Maintenance San Diego | Good Steward</title>
+    <meta name="description" content="Commercial property maintenance in San Diego: handyman, tenant improvements, remodeling, water damage restoration & more. Keep your facility at its best." />
+    <meta property="og:title" content="Commercial Property Maintenance San Diego | Good Steward" />
+    <meta property="og:description" content="Commercial property maintenance in San Diego: handyman, tenant improvements, remodeling, water damage restoration & more. Keep your facility at its best." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/images/logo.svg" />
     <meta property="og:url" content="https://www.gsteward.com/maintenance" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Maintenance Services - Good Steward Cleaning" />
-    <meta name="twitter:description" content="Expert maintenance solutions, including handyman services, renovations, and water damage restoration." />
+    <meta name="twitter:title" content="Commercial Property Maintenance San Diego | Good Steward" />
+    <meta name="twitter:description" content="Commercial property maintenance in San Diego: handyman, tenant improvements, remodeling, water damage restoration & more. Keep your facility at its best." />
     <meta name="twitter:image" content="/images/logo.svg" />
     <link rel="canonical" href="https://www.gsteward.com/maintenance" />
   </>
