@@ -43,16 +43,16 @@ const AboutUs = () => {
 
 export const Head = () => (
   <>
-    <title>About Us - Good Steward Cleaning</title>
-    <meta name="description" content="Learn more about Good Steward Cleaning – a team of professionals dedicated to delivering high-quality, client-centered cleaning solutions with trust and integrity." />
-    <meta property="og:title" content="About Us - Good Steward Cleaning" />
-    <meta property="og:description" content="We take pride in our commitment to quality, integrity, and sustainability. Discover why businesses trust Good Steward Cleaning for their cleaning needs." />
+    <title>About Good Steward Cleaning | San Diego & Oceanside</title>
+    <meta name="description" content="Meet Good Steward Cleaning — a San Diego & Oceanside commercial cleaning company with an in-house team, no outsourcing, and a relationship-first approach." />
+    <meta property="og:title" content="About Good Steward Cleaning | San Diego & Oceanside" />
+    <meta property="og:description" content="Meet Good Steward Cleaning — a San Diego & Oceanside commercial cleaning company with an in-house team, no outsourcing, and a relationship-first approach." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/images/logo.svg" />
     <meta property="og:url" content="https://www.gsteward.com/about-us" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="About Us - Good Steward Cleaning" />
-    <meta name="twitter:description" content="At Good Steward Cleaning, we focus on quality, integrity, and client satisfaction. Learn more about our values and commitment to excellence." />
+    <meta name="twitter:title" content="About Good Steward Cleaning | San Diego & Oceanside" />
+    <meta name="twitter:description" content="Meet Good Steward Cleaning — a San Diego & Oceanside commercial cleaning company with an in-house team, no outsourcing, and a relationship-first approach." />
     <meta name="twitter:image" content="/images/logo.svg" />
     <link rel="canonical" href="https://www.gsteward.com/about-us" />
   </>
