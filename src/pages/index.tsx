@@ -41,16 +41,16 @@ const IndexPage = () => {
 
 export const Head = () => (
   <>
-    <title>Home - Good Steward Cleaning</title>
-    <meta name="description" content="Good Steward Cleaning provides top-quality janitorial and maintenance services for commercial and office spaces." />
-    <meta property="og:title" content="Home - Good Steward Cleaning" />
-    <meta property="og:description" content="Good Steward Cleaning provides top-quality janitorial and maintenance services for commercial and office spaces." />
+    <title>Commercial & Office Cleaning San Diego | Good Steward</title>
+    <meta name="description" content="Reliable commercial & office cleaning in San Diego & Oceanside. Good Steward's in-house team delivers custom, dependable service. Get a free quote today." />
+    <meta property="og:title" content="Commercial & Office Cleaning San Diego | Good Steward" />
+    <meta property="og:description" content="Reliable commercial & office cleaning in San Diego & Oceanside. Good Steward's in-house team delivers custom, dependable service. Get a free quote today." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/images/logo.svg" />
     <meta property="og:url" content="https://www.gsteward.com/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Home - Good Steward Cleaning" />
-    <meta name="twitter:description" content="Good Steward Cleaning provides top-quality janitorial and maintenance services for commercial and office spaces." />
+    <meta name="twitter:title" content="Commercial & Office Cleaning San Diego | Good Steward" />
+    <meta name="twitter:description" content="Reliable commercial & office cleaning in San Diego & Oceanside. Good Steward's in-house team delivers custom, dependable service. Get a free quote today." />
     <meta name="twitter:image" content="/images/logo.svg" />
   </>
 )
