@@ -135,12 +135,12 @@ export const Head = () => (
     <meta property="og:title" content="Commercial Property Maintenance San Diego | Good Steward" />
     <meta property="og:description" content="Commercial property maintenance in San Diego: handyman, tenant improvements, remodeling, water damage restoration & more. Keep your facility at its best." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/images/logo.svg" />
+    <meta property="og:image" content="https://www.gsteward.com/images/og-image.png" />
     <meta property="og:url" content="https://www.gsteward.com/maintenance" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Commercial Property Maintenance San Diego | Good Steward" />
     <meta name="twitter:description" content="Commercial property maintenance in San Diego: handyman, tenant improvements, remodeling, water damage restoration & more. Keep your facility at its best." />
-    <meta name="twitter:image" content="/images/logo.svg" />
+    <meta name="twitter:image" content="https://www.gsteward.com/images/og-image.png" />
     <link rel="canonical" href="https://www.gsteward.com/maintenance" />
   </>
 )
