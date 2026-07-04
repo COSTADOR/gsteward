@@ -46,12 +46,12 @@ export const Head = () => (
     <meta property="og:title" content="Commercial & Office Cleaning San Diego | Good Steward" />
     <meta property="og:description" content="Reliable commercial & office cleaning in San Diego & Oceanside. Good Steward's in-house team delivers custom, dependable service. Get a free quote today." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/images/logo.svg" />
+    <meta property="og:image" content="https://www.gsteward.com/images/og-image.png" />
     <meta property="og:url" content="https://www.gsteward.com/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Commercial & Office Cleaning San Diego | Good Steward" />
     <meta name="twitter:description" content="Reliable commercial & office cleaning in San Diego & Oceanside. Good Steward's in-house team delivers custom, dependable service. Get a free quote today." />
-    <meta name="twitter:image" content="/images/logo.svg" />
+    <meta name="twitter:image" content="https://www.gsteward.com/images/og-image.png" />
   </>
 )
 
