@@ -199,12 +199,12 @@ export const Head = () => (
     <meta property="og:title" content="Janitorial Services in San Diego | Good Steward Cleaning" />
     <meta property="og:description" content="Professional janitorial services in San Diego for offices, schools, medical & gyms — deep cleaning, sanitation, day porter & floor care. Free quote." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/images/logo.svg" />
+    <meta property="og:image" content="https://www.gsteward.com/images/og-image.png" />
     <meta property="og:url" content="https://www.gsteward.com/janitorial" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Janitorial Services in San Diego | Good Steward Cleaning" />
     <meta name="twitter:description" content="Professional janitorial services in San Diego for offices, schools, medical & gyms — deep cleaning, sanitation, day porter & floor care. Free quote." />
-    <meta name="twitter:image" content="/images/logo.svg" />
+    <meta name="twitter:image" content="https://www.gsteward.com/images/og-image.png" />
     <link rel="canonical" href="https://www.gsteward.com/janitorial" />
   </>
 )
