@@ -21,12 +21,12 @@ export const Head = () => (
       <meta property="og:title" content="Contact Us | Good Steward Cleaning – San Diego & Oceanside" />
       <meta property="og:description" content={`Contact Good Steward Cleaning for commercial & office cleaning in San Diego & Oceanside. Call ${CONTACT_INFO.phone} for a free on-site walkthrough & quote.`} />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content="/images/logo.svg" />
+      <meta property="og:image" content="https://www.gsteward.com/images/og-image.png" />
       <meta property="og:url" content="https://www.gsteward.com/contact-us" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Contact Us | Good Steward Cleaning – San Diego & Oceanside" />
       <meta name="twitter:description" content={`Contact Good Steward Cleaning for commercial & office cleaning in San Diego & Oceanside. Call ${CONTACT_INFO.phone} for a free on-site walkthrough & quote.`} />
-      <meta name="twitter:image" content="/images/logo.svg" />
+      <meta name="twitter:image" content="https://www.gsteward.com/images/og-image.png" />
       <link rel="canonical" href="https://www.gsteward.com/contact-us" />
   </>
 )
