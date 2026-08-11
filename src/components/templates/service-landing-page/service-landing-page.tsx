@@ -10,8 +10,10 @@ import Features from "../../sections/features/features"
 import RelatedServices from "../../sections/related-services/related-services"
 import CallToAction from "../../sections/call-to-action/call-to-action"
 import type { ServicePageConfig } from "../../../types/service-page.types"
-
-const SITE_URL = "https://www.gsteward.com"
+import {
+  createBreadcrumbSchema,
+  createSanDiegoServiceSchema,
+} from "../../../utils/service-schema"
 
 const CTA_TITLE = "Not sure what service you need?"
 const CTA_DESCRIPTION =
@@ -30,52 +32,14 @@ const getBreadcrumbs = (config: ServicePageConfig) => [
 
 const getSchemas = (config: ServicePageConfig) => {
   const breadcrumbs = getBreadcrumbs(config)
-  const pageUrl = `${SITE_URL}${config.pathname}/`
 
   return [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: breadcrumbs.map((item, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        name: item.label,
-        item:
-          index === breadcrumbs.length - 1
-            ? pageUrl
-            : `${SITE_URL}${item.path}`,
-      })),
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
+    createBreadcrumbSchema(breadcrumbs, config.pathname),
+    createSanDiegoServiceSchema({
       name: config.h1,
+      pathname: config.pathname,
       serviceType: config.serviceType,
-      url: pageUrl,
-      provider: {
-        "@type": "LocalBusiness",
-        "@id": `${SITE_URL}/#localbusiness`,
-        name: "Good Steward Cleaning",
-        url: `${SITE_URL}/`,
-        telephone: "+18583797770",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "11440 W. Bernardo Court #300",
-          addressLocality: "San Diego",
-          addressRegion: "CA",
-          postalCode: "92127",
-          addressCountry: "US",
-        },
-      },
-      areaServed: {
-        "@type": "City",
-        name: "San Diego",
-        containedInPlace: {
-          "@type": "State",
-          name: "California",
-        },
-      },
-    },
+    }),
   ]
 }
 

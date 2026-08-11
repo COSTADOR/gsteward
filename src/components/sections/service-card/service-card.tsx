@@ -47,7 +47,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           ))}
         </div>
         {href && (
-          <Link to={href} className="service-card__link">
+          <Link
+            to={href}
+            className="service-card__link button button--secondary with-icon icon-right"
+          >
             Learn More
           </Link>
         )}

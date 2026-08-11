@@ -66,16 +66,8 @@
   }
 
   &__link {
-    display: inline-block;
     margin-top: 20px;
-    color: var(--primary-400);
-    font-size: var(--body-sm);
-    font-weight: var(--weight-bold);
-
-    &:hover,
-    &:focus-visible {
-      text-decoration: underline;
-    }
+    padding-left: 0;
   }
 
   &--standalone {

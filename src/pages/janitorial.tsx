@@ -6,6 +6,12 @@ import CallToAction from "../components/sections/call-to-action/call-to-action"
 import ServiceList from "../components/sections/service-list/service-list"
 import ServiceHero from "../components/sections/service-hero/service-hero"
 import Seo from "../components/common/seo/seo"
+import Breadcrumbs from "../components/common/breadcrumbs/breadcrumbs"
+import StructuredData from "../components/common/structured-data/structured-data"
+import {
+  createBreadcrumbSchema,
+  createSanDiegoServiceSchema,
+} from "../utils/service-schema"
 
 const seo = {
   title: "Janitorial Services in San Diego | Good Steward Cleaning",
@@ -13,6 +19,17 @@ const seo = {
     "Professional janitorial services in San Diego for offices, schools, medical & gyms — deep cleaning, sanitation, day porter & floor care. Free quote.",
   pathname: "/janitorial",
 }
+
+const breadcrumbs = [{ label: "Home", path: "/" }, { label: "Janitorial" }]
+
+const schemas = [
+  createBreadcrumbSchema(breadcrumbs, seo.pathname),
+  createSanDiegoServiceSchema({
+    name: "Janitorial Services in San Diego",
+    pathname: seo.pathname,
+    serviceType: "Janitorial services",
+  }),
+]
 
 const Janitorial = () => {
   const data = useStaticQuery(graphql`
@@ -82,6 +99,7 @@ const Janitorial = () => {
         "Floor maintenance",
       ],
       image: getImage(data.service1)!,
+      imageAlt: "General janitorial and facility cleaning in San Diego",
     },
     {
       title: "Deep Cleaning",
@@ -93,6 +111,8 @@ const Janitorial = () => {
         "Baseboard, vent, and hard-to-reach area cleaning",
       ],
       image: getImage(data.service2)!,
+      imageAlt: "Commercial deep cleaning services in San Diego",
+      href: "/deep-cleaning/",
     },
     {
       title: "Sanitation Cleaning",
@@ -104,6 +124,8 @@ const Janitorial = () => {
         "Focus on health compliance",
       ],
       image: getImage(data.service3)!,
+      imageAlt: "Sanitation cleaning services in San Diego",
+      href: "/sanitation-cleaning/",
     },
     {
       title: "Day Porter Services",
@@ -115,6 +137,8 @@ const Janitorial = () => {
         "Maintaining cleanliness in high-traffic areas",
       ],
       image: getImage(data.service4)!,
+      imageAlt: "Day porter services in San Diego",
+      href: "/day-porter-services/",
     },
     {
       title: "Strip & Wax Services",
@@ -126,9 +150,11 @@ const Janitorial = () => {
         "Polishing for a smooth and shiny finish",
       ],
       image: getImage(data.service5)!,
+      imageAlt: "Strip and wax floor services in San Diego",
+      href: "/strip-and-wax-floor-care/",
     },
     {
-      title: "Carpet Cleaning",
+      title: "Carpet & Floor Cleaning",
       description:
         "Extend the life of your carpets and keep them looking like new with our professional carpet cleaning services.",
       tags: [
@@ -137,6 +163,8 @@ const Janitorial = () => {
         "Fabric-safe and eco-friendly methods",
       ],
       image: getImage(data.service6)!,
+      imageAlt: "Commercial carpet and floor cleaning in San Diego",
+      href: "/commercial-floor-care/",
     },
     {
       title: "Spot Cleaning",
@@ -148,6 +176,8 @@ const Janitorial = () => {
         "Minimal drying time",
       ],
       image: getImage(data.service7)!,
+      imageAlt: "Spot cleaning services in San Diego",
+      href: "/spot-cleaning/",
     },
     {
       title: "Window Cleaning",
@@ -159,6 +189,8 @@ const Janitorial = () => {
         "Safe techniques for all types of windows",
       ],
       image: getImage(data.service8)!,
+      imageAlt: "Commercial window cleaning in San Diego",
+      href: "/commercial-window-cleaning/",
     },
     {
       title: "Green Cleaning",
@@ -170,6 +202,8 @@ const Janitorial = () => {
         "Certified to national and state standards",
       ],
       image: getImage(data.service9)!,
+      imageAlt: "Green cleaning services in San Diego",
+      href: "/green-cleaning/",
     },
     {
       title: "Ozone Cleaning",
@@ -181,6 +215,8 @@ const Janitorial = () => {
         "Effective against bacteria, viruses, and allergens",
       ],
       image: getImage(data.service10)!,
+      imageAlt: "Ozone cleaning services in San Diego",
+      href: "/ozone-cleaning/",
     },
   ]
   
@@ -190,9 +226,10 @@ const Janitorial = () => {
   return (
     <Layout>
       <ServiceHero
-        subtitle="Professional Janitorial Services"
-        title="Janitorial"
-        description="Our professional janitorial services ensure your business maintains a clean, hygienic, and welcoming environment. From routine cleaning to tackling tough messes, we’ve got you covered. We specialize in private schools, office buildings, medical offices, and gym facilities."
+        breadcrumbs={<Breadcrumbs items={breadcrumbs} />}
+        subtitle="Professional Janitorial Services in San Diego"
+        title="Janitorial Services in San Diego"
+        description="Our professional janitorial services ensure your business maintains a clean, hygienic, and welcoming environment. From routine cleaning to tackling tough messes, we’ve got you covered. We specialize in private schools, office buildings, medical offices, and gym facilities across San Diego."
       />
       <ServiceList services={services} />
       <CallToAction title={ctaTitle} description={ctaDescription} />
@@ -200,6 +237,13 @@ const Janitorial = () => {
   )
 }
 
-export const Head = () => <Seo {...seo} />
+export const Head = () => (
+  <>
+    <Seo {...seo} />
+    {schemas.map(schema => (
+      <StructuredData data={schema} key={schema["@type"]} />
+    ))}
+  </>
+)
 
 export default Janitorial
