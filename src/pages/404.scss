@@ -1,0 +1,106 @@
+@use "../styles/mixins" as *;
+
+.not-found-page {
+  min-height: 100vh;
+
+  main {
+    flex: 1;
+  }
+}
+
+.not-found {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: var(--spacing-xl) var(--spacing-md);
+
+  &__container {
+    width: 100%;
+  }
+
+  &__panel {
+    position: relative;
+    display: flex;
+    min-height: 520px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: var(--spacing-xxl) var(--spacing-xl);
+    border-radius: 24px;
+    background: var(--primary-25);
+    text-align: center;
+  }
+
+  &__code {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: rgba(173, 192, 219, 0.28);
+    font-size: clamp(190px, 30vw, 430px);
+    font-weight: var(--weight-bold);
+    line-height: 0.8;
+    letter-spacing: -0.08em;
+    transform: translate(-50%, -50%);
+    user-select: none;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    max-width: 720px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__eyebrow {
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-400);
+    font-size: var(--subtitle);
+    font-weight: var(--weight-bold);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  &__description {
+    max-width: 580px;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+  }
+
+  @include sm {
+    padding: var(--spacing-lg) var(--spacing-xs);
+
+    &__panel {
+      min-height: 460px;
+      padding: var(--spacing-xl) var(--spacing-sm);
+      border-radius: 20px;
+    }
+
+    &__code {
+      top: 46%;
+      font-size: clamp(150px, 55vw, 220px);
+    }
+
+    &__actions {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    &__actions .button {
+      width: min(100%, 250px);
+    }
+  }
+}
