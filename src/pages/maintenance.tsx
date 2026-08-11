@@ -6,13 +6,30 @@ import CallToAction from "../components/sections/call-to-action/call-to-action"
 import ServiceList from "../components/sections/service-list/service-list"
 import ServiceHero from "../components/sections/service-hero/service-hero"
 import Seo from "../components/common/seo/seo"
+import Breadcrumbs from "../components/common/breadcrumbs/breadcrumbs"
+import StructuredData from "../components/common/structured-data/structured-data"
+import {
+  createBreadcrumbSchema,
+  createSanDiegoServiceSchema,
+} from "../utils/service-schema"
 
 const seo = {
-  title: "Commercial Property Maintenance San Diego | Good Steward",
+  title: "Commercial Maintenance Services San Diego | Good Steward",
   description:
-    "Commercial property maintenance in San Diego: handyman, tenant improvements, remodeling, water damage restoration & more. Keep your facility at its best.",
+    "Professional maintenance services in San Diego — handyman, remodeling, water damage restoration & air duct cleaning. Get a free quote today.",
   pathname: "/maintenance",
 }
+
+const breadcrumbs = [{ label: "Home", path: "/" }, { label: "Maintenance" }]
+
+const schemas = [
+  createBreadcrumbSchema(breadcrumbs, seo.pathname),
+  createSanDiegoServiceSchema({
+    name: "Maintenance Services in San Diego",
+    pathname: seo.pathname,
+    serviceType: "Commercial maintenance services",
+  }),
+]
 
 const Maintenance = () => {
   // Загружаем изображения через GraphQL
@@ -48,6 +65,11 @@ const Maintenance = () => {
           gatsbyImageData(width: 600, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 90)
         }
       }
+      service7: file(relativePath: { eq: "maintenance.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(width: 600, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 90)
+        }
+      }
     }
   `)
   
@@ -62,6 +84,7 @@ const Maintenance = () => {
         "General maintenance tasks",
       ],
       image: getImage(data.service1)!,
+      imageAlt: "Handyman services in San Diego",
     },
     {
       title: "Home Improvement Services",
@@ -73,6 +96,7 @@ const Maintenance = () => {
         "Custom solutions tailored to your needs",
       ],
       image: getImage(data.service2)!,
+      imageAlt: "Property improvement services in San Diego",
     },
     {
       title: "Tenant Improvement Services",
@@ -84,6 +108,7 @@ const Maintenance = () => {
         "Compliance with building regulations",
       ],
       image: getImage(data.service3)!,
+      imageAlt: "Commercial tenant improvement services in San Diego",
     },
     {
       title: "Remodeling & Construction Services",
@@ -95,6 +120,7 @@ const Maintenance = () => {
         "Structural upgrades and repairs",
       ],
       image: getImage(data.service4)!,
+      imageAlt: "Remodeling and construction services in San Diego",
     },
     {
       title: "Water Damage Restoration Services",
@@ -106,6 +132,7 @@ const Maintenance = () => {
         "Repair and reconstruction of affected areas",
       ],
       image: getImage(data.service5)!,
+      imageAlt: "Water damage restoration services in San Diego",
     },
     {
       title: "Consulting Services",
@@ -117,6 +144,19 @@ const Maintenance = () => {
         "Preventive strategies to avoid future problems",
       ],
       image: getImage(data.service6)!,
+      imageAlt: "Commercial property maintenance consulting in San Diego",
+    },
+    {
+      title: "Air Duct Cleaning",
+      description:
+        "Commercial air duct cleaning for San Diego facilities, helping keep HVAC ductwork clean and well maintained.",
+      tags: [
+        "Commercial air duct cleaning",
+        "HVAC ductwork cleaning",
+        "Service for San Diego facilities",
+      ],
+      image: getImage(data.service7)!,
+      imageAlt: "Commercial air duct cleaning in San Diego",
     },
   ]
   
@@ -126,9 +166,10 @@ const Maintenance = () => {
   return (
     <Layout>
       <ServiceHero
-        subtitle="Professional Maintenance Services"
-        title="Maintenance"
-        description="At Good Steward Cleaning, we provide a full range of services to keep your property in top condition. From minor repairs to major renovations, our team ensures your space is safe, functional, and always at its best."
+        breadcrumbs={<Breadcrumbs items={breadcrumbs} />}
+        subtitle="Professional Maintenance Services in San Diego"
+        title="Maintenance Services in San Diego"
+        description="At Good Steward Cleaning, we provide a full range of services across San Diego to keep your property in top condition. From minor repairs to major renovations, our team ensures your space is safe, functional, and always at its best."
       />
       <ServiceList services={services} />
       <CallToAction title={ctaTitle} description={ctaDescription} />
@@ -136,6 +177,13 @@ const Maintenance = () => {
   )
 }
 
-export const Head = () => <Seo {...seo} />
+export const Head = () => (
+  <>
+    <Seo {...seo} />
+    {schemas.map(schema => (
+      <StructuredData data={schema} key={schema["@type"]} />
+    ))}
+  </>
+)
 
 export default Maintenance
