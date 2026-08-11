@@ -1,5 +1,5 @@
 import { CONTACT_INFO } from "../constants/contacts.const"
-import { SERVICE_AREAS } from "../constants/service-areas.const"
+import { SERVICE_AREA_LIST } from "../constants/service-areas.const"
 import { LOCAL_BUSINESS_ID, SITE_URL } from "../constants/seo.const"
 import type { ServiceArea } from "../types/location.types"
 
@@ -25,25 +25,19 @@ export const createLocalBusinessSchema = () => ({
   url: `${SITE_URL}/`,
   logo: `${SITE_URL}/images/logo.svg`,
   image: `${SITE_URL}/images/og-image.png`,
-  telephone: "+18583797770",
+  telephone: CONTACT_INFO.phoneE164,
   email: CONTACT_INFO.email,
-  address: [
-    toPostalAddress(SERVICE_AREAS.sanDiego),
-    toPostalAddress(SERVICE_AREAS.oceanside),
-  ],
-  areaServed: [
-    toAreaServed(SERVICE_AREAS.sanDiego),
-    toAreaServed(SERVICE_AREAS.oceanside),
-  ],
+  address: SERVICE_AREA_LIST.map(toPostalAddress),
+  areaServed: SERVICE_AREA_LIST.map(toAreaServed),
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "09:00",
-    closes: "18:00",
+    dayOfWeek: CONTACT_INFO.openingHours.days,
+    opens: CONTACT_INFO.openingHours.opens,
+    closes: CONTACT_INFO.openingHours.closes,
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+18583797770",
+    telephone: CONTACT_INFO.phoneE164,
     contactType: "customer service",
     areaServed: "US-CA",
     availableLanguage: "English",

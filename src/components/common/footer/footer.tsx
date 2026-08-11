@@ -2,12 +2,14 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { CONTACT_INFO } from "../../../constants/contacts.const"
 import { ROUTES } from "../../../constants/routes.const"
+import { SERVICE_AREA_LIST } from "../../../constants/service-areas.const"
 import {
   COMPANY_NAV_ITEMS,
   FOOTER_SERVICE_NAV_ITEMS,
   SERVICE_AREA_NAV_ITEMS,
   type NavigationLink,
 } from "../../../data/navigation.data"
+import { formatPostalAddress } from "../../../utils/address"
 import "./footer.scss"
 
 interface FooterLinksProps {
@@ -57,9 +59,9 @@ const Footer = () => (
           <FooterLinks title="Company" links={COMPANY_NAV_ITEMS} />
           <div className="footer__section footer__section--contact">
             <h2 className="footer__title">Contact Us</h2>
-            {CONTACT_INFO.addresses.map(address => (
-              <p key={address} className="footer__text">
-                {address}
+            {SERVICE_AREA_LIST.map(serviceArea => (
+              <p key={serviceArea.city} className="footer__text">
+                {formatPostalAddress(serviceArea.officeAddress)}
               </p>
             ))}
             <p className="footer__text">

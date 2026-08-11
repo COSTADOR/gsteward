@@ -2,8 +2,16 @@ import React from "react"
 import { Link } from "gatsby"
 import "./contact.scss"
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"
-import { center, containerStyle, G_API_KEY, mapStyles, markers } from "../../../constants/map.const"
+import {
+  center,
+  containerStyle,
+  G_API_KEY,
+  mapStyles,
+  markers,
+} from "../../../constants/map.const"
 import { CONTACT_INFO } from "../../../constants/contacts.const"
+import { SERVICE_AREA_LIST } from "../../../constants/service-areas.const"
+import { formatPostalAddress } from "../../../utils/address"
 
 const Contact: React.FC = () => {
   return (
@@ -15,14 +23,22 @@ const Contact: React.FC = () => {
             <br /> <em>your cleaning needs!</em>
           </h2>
           <div className="contact__content">
-            <p className="contact__content-title">San Diego Office</p>
-            <p className="contact__text">{CONTACT_INFO.addresses[0]}</p>
-            <p className="contact__content-title">North County Office</p>
-            <p className="contact__text">{CONTACT_INFO.addresses[1]}</p>
+            {SERVICE_AREA_LIST.map(serviceArea => (
+              <React.Fragment key={serviceArea.city}>
+                <p className="contact__content-title">
+                  {serviceArea.officeLabel}
+                </p>
+                <p className="contact__text">
+                  {formatPostalAddress(serviceArea.officeAddress)}
+                </p>
+              </React.Fragment>
+            ))}
             <p className="contact__content-title">Phone</p>
-            <p className="contact__text">{CONTACT_INFO.phone}</p>
+            <p className="contact__text">
+              <a href={CONTACT_INFO.phoneHref}>{CONTACT_INFO.phone}</a>
+            </p>
             <p className="contact__content-title">
-              Available Monday to Friday, 9 AM - 6 PM PST
+              {CONTACT_INFO.availability}
             </p>
           </div>
           <div className="contact__buttons">

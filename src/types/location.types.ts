@@ -7,6 +7,7 @@ export interface PostalAddress {
 }
 
 export interface ServiceArea {
+  officeLabel: string
   city: string
   stateCode: string
   stateName: string

@@ -7,6 +7,7 @@ import {
   OCEANSIDE_OFFICE_LOCATION,
 } from "../../../constants/map.const"
 import type { PostalAddress } from "../../../types/location.types"
+import { formatPostalAddress } from "../../../utils/address"
 import "./office-location.scss"
 
 interface OfficeLocationProps {
@@ -14,11 +15,8 @@ interface OfficeLocationProps {
   address: PostalAddress
 }
 
-const formatAddress = (address: PostalAddress) =>
-  `${address.streetAddress}, ${address.addressLocality}, ${address.addressRegion} ${address.postalCode}`
-
 const OfficeLocation: React.FC<OfficeLocationProps> = ({ label, address }) => {
-  const formattedAddress = formatAddress(address)
+  const formattedAddress = formatPostalAddress(address)
 
   return (
     <section className="office-location">

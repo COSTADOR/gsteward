@@ -2,6 +2,7 @@ import type { ServiceArea } from "../types/location.types"
 
 export const SERVICE_AREAS = {
   sanDiego: {
+    officeLabel: "San Diego Office",
     city: "San Diego",
     stateCode: "CA",
     stateName: "California",
@@ -15,6 +16,7 @@ export const SERVICE_AREAS = {
     },
   },
   oceanside: {
+    officeLabel: "North County Office",
     city: "Oceanside",
     stateCode: "CA",
     stateName: "California",
@@ -28,3 +30,8 @@ export const SERVICE_AREAS = {
     },
   },
 } as const satisfies Record<string, ServiceArea>
+
+export const SERVICE_AREA_LIST = [
+  SERVICE_AREAS.sanDiego,
+  SERVICE_AREAS.oceanside,
+] as const

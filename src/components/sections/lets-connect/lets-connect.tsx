@@ -1,8 +1,16 @@
 import React from "react"
 import "./lets-connect.scss"
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"
-import { center, containerStyle, G_API_KEY, mapStyles, markers } from "../../../constants/map.const"
+import {
+  center,
+  containerStyle,
+  G_API_KEY,
+  mapStyles,
+  markers,
+} from "../../../constants/map.const"
 import { CONTACT_INFO } from "../../../constants/contacts.const"
+import { SERVICE_AREA_LIST } from "../../../constants/service-areas.const"
+import { formatPostalAddress } from "../../../utils/address"
 
 const LetsConnect: React.FC = () => {
   return (
@@ -24,19 +32,28 @@ const LetsConnect: React.FC = () => {
               Call us directly to discuss your cleaning needs or to schedule a
               consultation
             </p>
-            <p className="lets-connect__text">{CONTACT_INFO.phone}</p>
+            <p className="lets-connect__text">
+              <a href={CONTACT_INFO.phoneHref}>{CONTACT_INFO.phone}</a>
+            </p>
             <hr className="lets-connect__divider" />
-            <p className="lets-connect__content-title">San Diego Office</p>
-            <p className="lets-connect__text">{CONTACT_INFO.addresses[0]}</p>
-            <hr className="lets-connect__divider" />
-            <p className="lets-connect__content-title">North County Office</p>
-            <p className="lets-connect__text">{CONTACT_INFO.addresses[1]}</p>
-            <hr className="lets-connect__divider" />
+            {SERVICE_AREA_LIST.map(serviceArea => (
+              <React.Fragment key={serviceArea.city}>
+                <p className="lets-connect__content-title">
+                  {serviceArea.officeLabel}
+                </p>
+                <p className="lets-connect__text">
+                  {formatPostalAddress(serviceArea.officeAddress)}
+                </p>
+                <hr className="lets-connect__divider" />
+              </React.Fragment>
+            ))}
             <p className="lets-connect__content-title">Email</p>
-            <p className="lets-connect__text">{CONTACT_INFO.email}</p>
+            <p className="lets-connect__text">
+              <a href={CONTACT_INFO.emailHref}>{CONTACT_INFO.email}</a>
+            </p>
             <hr className="lets-connect__divider" />
             <p className="lets-connect__content-title">
-              Available Monday to Friday, 9 AM - 6 PM PST
+              {CONTACT_INFO.availability}
             </p>
           </div>
           <div className="lets-connect__buttons">
