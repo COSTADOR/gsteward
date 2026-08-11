@@ -6,17 +6,20 @@ interface ServiceHeroProps {
   subtitle: string
   title: string
   description: string
+  breadcrumbs?: React.ReactNode
 }
 
 const ServiceHero: React.FC<ServiceHeroProps> = ({
   subtitle,
   title,
   description,
+  breadcrumbs,
 }) => {
   return (
     <section className="service-hero">
       <div className="service-hero__container container">
         <div className="service-hero__header">
+          {breadcrumbs}
           <div className="service-hero__subtitle">{subtitle}</div>
           <h1 className="service-hero__title title-xxl">{title}</h1>
           <p className="service-hero__description">{description}</p>

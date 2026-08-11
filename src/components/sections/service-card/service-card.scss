@@ -78,6 +78,46 @@
     }
   }
 
+  &--standalone {
+    align-items: stretch;
+    gap: var(--spacing-lg);
+
+    .service-card__image {
+      width: 50%;
+      height: auto;
+      min-height: 320px;
+    }
+
+    .service-card__image-content {
+      height: 100%;
+    }
+
+    .service-card__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: var(--spacing-md) 0;
+    }
+
+    .service-card__title {
+      font-size: var(--heading-lg);
+      margin-bottom: 20px;
+    }
+
+    @include md {
+      flex-direction: column;
+
+      .service-card__image {
+        width: 100%;
+        min-height: 280px;
+      }
+
+      .service-card__content {
+        padding-bottom: 0;
+      }
+    }
+  }
+
   &:hover {
     .service-card__image-content {
       transform: scale(1.05);

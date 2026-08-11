@@ -1,0 +1,39 @@
+.breadcrumbs {
+  margin-bottom: 32px;
+
+  &__list,
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__item {
+    gap: 10px;
+    font-size: var(--body-sm);
+  }
+
+  &__link {
+    color: var(--primary-400);
+    font-weight: var(--weight-medium);
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+
+  &__current {
+    color: var(--text-secondary);
+  }
+
+  &__separator {
+    width: 12px;
+    height: 9px;
+    opacity: 0.45;
+  }
+}

@@ -4,16 +4,29 @@ import { Link } from "gatsby"
 import "./service-card.scss"
 import type { Service } from "../../../types/service.types"
 
-const ServiceCard: React.FC<Service> = ({
+interface ServiceCardProps extends Service {
+  variant?: "default" | "standalone"
+  headingLevel?: 2 | 3
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
   tags,
   image,
   imageAlt,
   href,
+  variant = "default",
+  headingLevel = 3,
 }) => {
+  const Title = headingLevel === 2 ? "h2" : "h3"
+
   return (
-    <div className="service-card">
+    <div
+      className={`service-card ${
+        variant === "standalone" ? "service-card--standalone" : ""
+      }`}
+    >
       <div className="service-card__image">
         <GatsbyImage
           image={image}
@@ -22,7 +35,7 @@ const ServiceCard: React.FC<Service> = ({
         />
       </div>
       <div className="service-card__content">
-        <h3 className="service-card__title">{title}</h3>
+        <Title className="service-card__title">{title}</Title>
         <p className="service-card__description">{description}</p>
         <div className="service-card__tags">
           {tags.map(tag => (
