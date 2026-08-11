@@ -7,12 +7,12 @@ import {
 } from "../components/templates/service-landing-page/service-landing-page"
 import { servicePages } from "../data/service-pages.data"
 
-const config = servicePages.deepCleaning
+const config = servicePages.commercialWindowCleaning
 
-const DeepCleaning = () => {
+const CommercialWindowCleaning = () => {
   const data = useStaticQuery(graphql`
     query {
-      serviceImage: file(relativePath: { eq: "janitorial/service2.jpg" }) {
+      serviceImage: file(relativePath: { eq: "janitorial/service8.jpg" }) {
         childImageSharp {
           gatsbyImageData(width: 900, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 90)
         }
@@ -20,14 +20,9 @@ const DeepCleaning = () => {
     }
   `)
 
-  return (
-    <ServiceLandingPage
-      config={config}
-      image={getImage(data.serviceImage)!}
-    />
-  )
+  return <ServiceLandingPage config={config} image={getImage(data.serviceImage)!} />
 }
 
 export const Head = () => <ServiceLandingHead config={config} />
 
-export default DeepCleaning
+export default CommercialWindowCleaning

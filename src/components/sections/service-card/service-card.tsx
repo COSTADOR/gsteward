@@ -36,7 +36,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       </div>
       <div className="service-card__content">
         <Title className="service-card__title">{title}</Title>
-        <p className="service-card__description">{description}</p>
+        {description && (
+          <p className="service-card__description">{description}</p>
+        )}
         <div className="service-card__tags">
           {tags.map(tag => (
             <span key={tag} className="service-card__tag">
