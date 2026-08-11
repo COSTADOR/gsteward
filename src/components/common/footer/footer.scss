@@ -1,57 +1,114 @@
 @use "../../../styles/mixins" as *;
 
 .footer {
+  padding: 40px 30px 30px;
   background-color: var(--black);
   color: white;
   text-align: center;
-  padding: 30px;
+
   &__container {
     padding: 0 var(--spacing-xl);
+
     @include sm {
       padding: 0;
     }
   }
-  &__logo {
-    &-image {
-      width: 300px;
-    }
+
+  &__logo-image {
+    width: 260px;
   }
+
   &__top {
     display: flex;
-    text-align: left;
-    gap: 20%;
+    gap: 7%;
+    padding-bottom: 34px;
     border-bottom: 1px solid #1b192d;
-    @include md {
+    text-align: left;
+
+    @include lg {
       flex-direction: column;
+      gap: 30px;
     }
   }
+
+  &__logo {
+    flex: none;
+  }
+
   &__content {
-    display: flex;
+    display: grid;
     flex: 1;
-    padding: 35px 0;
-    gap: 15%;
+    grid-template-columns: 1.8fr 1.3fr 0.8fr 1.4fr;
+    gap: 36px;
+
+    @include xlg {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
   }
-  &__bottom {
-    margin-top: 20px;
-    font-size: var(--body-sm);
-    color: #7f90a9;
-  }
+
   &__title {
+    margin-bottom: 22px;
     font-size: 13px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
     font-weight: var(--weight-bold);
+    text-transform: uppercase;
   }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__section--services &__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(135px, 1fr));
+    column-gap: 24px;
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+
   &__list li,
   &__text {
-    font-size: var(--body-sm);
     margin-bottom: 10px;
+    font-size: var(--body-sm);
     line-height: 1.5;
   }
-  
-  &__list li a {
-    &:hover {
+
+  &__list a,
+  &__text a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
       text-decoration: underline;
+    }
+
+    &:focus-visible {
+      border-radius: 2px;
+      outline: 2px solid var(--primary-400);
+      outline-offset: 3px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 20px;
+    color: #7f90a9;
+    font-size: var(--body-sm);
+  }
+
+  @include sm {
+    padding-right: 20px;
+    padding-left: 20px;
+
+    &__logo-image {
+      width: 220px;
     }
   }
 }

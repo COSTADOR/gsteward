@@ -1,47 +1,66 @@
 import * as React from "react"
-import "./footer.scss"
 import { Link } from "gatsby"
 import { CONTACT_INFO } from "../../../constants/contacts.const"
+import { ROUTES } from "../../../constants/routes.const"
+import {
+  COMPANY_NAV_ITEMS,
+  JANITORIAL_NAV_ITEMS,
+  SERVICE_AREA_NAV_ITEMS,
+  type NavigationLink,
+} from "../../../data/navigation.data"
+import "./footer.scss"
+
+interface FooterLinksProps {
+  title: string
+  links: NavigationLink[]
+  className?: string
+}
+
+const FooterLinks: React.FC<FooterLinksProps> = ({
+  title,
+  links,
+  className = "",
+}) => (
+  <div className={`footer__section ${className}`}>
+    <h2 className="footer__title">{title}</h2>
+    <ul className="footer__list">
+      {links.map(link => (
+        <li key={link.path}>
+          <Link to={link.path}>{link.name}</Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+)
 
 const Footer = () => (
   <footer className="footer">
     <div className="footer__container container">
       <div className="footer__top">
         <div className="footer__logo">
-          <Link to="/">
+          <Link to={ROUTES.home}>
             <img
               src="/images/logo-on-dark.svg"
-              alt="Good Steward Logo"
+              alt="Good Steward Cleaning"
               className="footer__logo-image"
-              width={150}
+              width={300}
             />
           </Link>
         </div>
         <div className="footer__content">
-          <div className="footer__section">
-            <h3 className="footer__title">ABOUT</h3>
-            <ul className="footer__list">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/janitorial">Janitorial</Link>
-              </li>
-              <li>
-                <Link to="/maintenance">Maintenance</Link>
-              </li>
-              <li>
-                <Link to="/about-us">About Us</Link>
-              </li>
-              <li>
-                <Link to="/contact-us">Contact Us</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="footer__section">
-            <h3 className="footer__title">CONTACT US</h3>
-            {CONTACT_INFO.addresses.map((address, index) => (
-              <p key={index} className="footer__text">{address}</p>
+          <FooterLinks
+            title="Services"
+            links={JANITORIAL_NAV_ITEMS}
+            className="footer__section--services"
+          />
+          <FooterLinks title="Service Areas" links={SERVICE_AREA_NAV_ITEMS} />
+          <FooterLinks title="Company" links={COMPANY_NAV_ITEMS} />
+          <div className="footer__section footer__section--contact">
+            <h2 className="footer__title">Contact Us</h2>
+            {CONTACT_INFO.addresses.map(address => (
+              <p key={address} className="footer__text">
+                {address}
+              </p>
             ))}
             <p className="footer__text">
               <a href={CONTACT_INFO.phoneHref}>{CONTACT_INFO.phone}</a>
@@ -50,7 +69,8 @@ const Footer = () => (
         </div>
       </div>
       <div className="footer__bottom">
-        &copy; {new Date().getFullYear()} Good Steward Cleaning. All Rights Reserved.
+        &copy; {new Date().getFullYear()} Good Steward Cleaning. All Rights
+        Reserved.
       </div>
     </div>
   </footer>
