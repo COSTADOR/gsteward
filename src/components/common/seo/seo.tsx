@@ -1,7 +1,10 @@
 import React from "react"
-
-const SITE_URL = "https://www.gsteward.com"
-const DEFAULT_IMAGE = "/images/og-image.png"
+import StructuredData from "../structured-data/structured-data"
+import {
+  DEFAULT_OG_IMAGE,
+  SITE_URL,
+} from "../../../constants/seo.const"
+import { createLocalBusinessSchema } from "../../../utils/local-business-schema"
 
 interface SeoProps {
   title: string
@@ -23,7 +26,7 @@ const Seo: React.FC<SeoProps> = ({
   title,
   description,
   pathname,
-  image = DEFAULT_IMAGE,
+  image = DEFAULT_OG_IMAGE,
 }) => {
   const pageUrl = toPageUrl(pathname)
   const imageUrl = toAbsoluteUrl(image)
@@ -42,6 +45,7 @@ const Seo: React.FC<SeoProps> = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
       <link rel="canonical" href={pageUrl} />
+      <StructuredData data={createLocalBusinessSchema()} />
     </>
   )
 }

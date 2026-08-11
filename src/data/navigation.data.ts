@@ -5,8 +5,13 @@ export interface NavigationLink {
   path: string
 }
 
+const ALL_JANITORIAL_SERVICES: NavigationLink = {
+  name: "All Janitorial Services",
+  path: ROUTES.janitorial,
+}
+
 export const JANITORIAL_NAV_ITEMS: NavigationLink[] = [
-  { name: "All Janitorial Services", path: ROUTES.janitorial },
+  ALL_JANITORIAL_SERVICES,
   { name: "Deep Cleaning", path: ROUTES.services.deepCleaning },
   { name: "Sanitation Cleaning", path: ROUTES.services.sanitationCleaning },
   { name: "Day Porter Services", path: ROUTES.services.dayPorterServices },
@@ -52,7 +57,12 @@ export const SERVICE_AREA_NAV_ITEMS: NavigationLink[] = [
 
 export const COMPANY_NAV_ITEMS: NavigationLink[] = [
   { name: "Home", path: ROUTES.home },
-  { name: "Maintenance", path: ROUTES.maintenance },
   { name: "About Us", path: ROUTES.aboutUs },
   { name: "Contact Us", path: ROUTES.contactUs },
+]
+
+export const FOOTER_SERVICE_NAV_ITEMS: NavigationLink[] = [
+  ALL_JANITORIAL_SERVICES,
+  { name: "Maintenance", path: ROUTES.maintenance },
+  ...JANITORIAL_NAV_ITEMS.slice(1),
 ]

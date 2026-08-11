@@ -4,7 +4,7 @@ import { CONTACT_INFO } from "../../../constants/contacts.const"
 import { ROUTES } from "../../../constants/routes.const"
 import {
   COMPANY_NAV_ITEMS,
-  JANITORIAL_NAV_ITEMS,
+  FOOTER_SERVICE_NAV_ITEMS,
   SERVICE_AREA_NAV_ITEMS,
   type NavigationLink,
 } from "../../../data/navigation.data"
@@ -50,7 +50,7 @@ const Footer = () => (
         <div className="footer__content">
           <FooterLinks
             title="Services"
-            links={JANITORIAL_NAV_ITEMS}
+            links={FOOTER_SERVICE_NAV_ITEMS}
             className="footer__section--services"
           />
           <FooterLinks title="Service Areas" links={SERVICE_AREA_NAV_ITEMS} />

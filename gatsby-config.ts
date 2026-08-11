@@ -15,6 +15,12 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        excludes: [`/404.html`],
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",

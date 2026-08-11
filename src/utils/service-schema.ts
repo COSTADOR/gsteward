@@ -1,7 +1,6 @@
 import type { BreadcrumbItem } from "../components/common/breadcrumbs/breadcrumbs"
+import { LOCAL_BUSINESS_ID, SITE_URL } from "../constants/seo.const"
 import type { ServiceArea } from "../types/location.types"
-
-const SITE_URL = "https://www.gsteward.com"
 
 interface ServiceSchemaOptions {
   name: string
@@ -39,15 +38,7 @@ export const createServiceSchema = ({
   serviceType,
   url: toAbsoluteUrl(pathname),
   provider: {
-    "@type": "LocalBusiness",
-    "@id": `${SITE_URL}/#localbusiness`,
-    name: "Good Steward Cleaning",
-    url: `${SITE_URL}/`,
-    telephone: "+18583797770",
-    address: {
-      "@type": "PostalAddress",
-      ...areaServed.officeAddress,
-    },
+    "@id": LOCAL_BUSINESS_ID,
   },
   areaServed: {
     "@type": "City",
