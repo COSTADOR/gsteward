@@ -1,8 +1,9 @@
 import type { ServicePageConfig } from "../types/service-page.types"
+import { ROUTES } from "../constants/routes.const"
 
 export const servicePages = {
   deepCleaning: {
-    pathname: "/deep-cleaning",
+    pathname: ROUTES.services.deepCleaning,
     seoTitle: "Deep Cleaning Services San Diego | Good Steward",
     seoDescription:
       "Thorough commercial deep cleaning in San Diego — high-touch sanitization, detailing & hard-to-reach area cleaning by our in-house team. Free quote.",
@@ -19,13 +20,16 @@ export const servicePages = {
     ],
     imageAlt: "Commercial deep cleaning services in San Diego",
     relatedServices: [
-      { title: "Sanitation Cleaning", path: "/sanitation-cleaning/" },
-      { title: "General Janitorial", path: "/janitorial/" },
-      { title: "Green Cleaning", path: "/green-cleaning/" },
+      {
+        title: "Sanitation Cleaning",
+        path: ROUTES.services.sanitationCleaning,
+      },
+      { title: "General Janitorial", path: ROUTES.janitorial },
+      { title: "Green Cleaning", path: ROUTES.services.greenCleaning },
     ],
   },
   sanitationCleaning: {
-    pathname: "/sanitation-cleaning",
+    pathname: ROUTES.services.sanitationCleaning,
     seoTitle: "Sanitation Cleaning Services San Diego | Good Steward",
     seoDescription:
       "EPA-approved sanitation & disinfection cleaning for San Diego businesses. Health-compliant, hygienic results from our in-house team. Free quote.",
@@ -42,14 +46,14 @@ export const servicePages = {
     ],
     imageAlt: "Sanitation cleaning services in San Diego",
     relatedServices: [
-      { title: "Deep Cleaning", path: "/deep-cleaning/" },
-      { title: "Green Cleaning", path: "/green-cleaning/" },
-      { title: "Ozone Cleaning", path: "/ozone-cleaning/" },
-      { title: "General Janitorial", path: "/janitorial/" },
+      { title: "Deep Cleaning", path: ROUTES.services.deepCleaning },
+      { title: "Green Cleaning", path: ROUTES.services.greenCleaning },
+      { title: "Ozone Cleaning", path: ROUTES.services.ozoneCleaning },
+      { title: "General Janitorial", path: ROUTES.janitorial },
     ],
   },
   dayPorterServices: {
-    pathname: "/day-porter-services",
+    pathname: ROUTES.services.dayPorterServices,
     seoTitle: "Day Porter Services San Diego | Good Steward Cleaning",
     seoDescription:
       "Reliable day porter services in San Diego — restroom restocking, lobby upkeep & continuous cleaning throughout the day. Get a free quote today.",
@@ -66,13 +70,16 @@ export const servicePages = {
     ],
     imageAlt: "Day porter services in San Diego",
     relatedServices: [
-      { title: "General Janitorial", path: "/janitorial/" },
-      { title: "Sanitation Cleaning", path: "/sanitation-cleaning/" },
-      { title: "Spot Cleaning", path: "/spot-cleaning/" },
+      { title: "General Janitorial", path: ROUTES.janitorial },
+      {
+        title: "Sanitation Cleaning",
+        path: ROUTES.services.sanitationCleaning,
+      },
+      { title: "Spot Cleaning", path: ROUTES.services.spotCleaning },
     ],
   },
   stripAndWax: {
-    pathname: "/strip-and-wax-floor-care",
+    pathname: ROUTES.services.stripAndWaxFloorCare,
     seoTitle: "Strip & Wax Floor Services San Diego | Good Steward",
     seoDescription:
       "Professional strip & wax floor services in San Diego. Remove old finishes and restore a durable, glossy shine. Free quote from our in-house team.",
@@ -89,12 +96,15 @@ export const servicePages = {
     ],
     imageAlt: "Strip and wax floor services in San Diego",
     relatedServices: [
-      { title: "Carpet & Floor Cleaning", path: "/commercial-floor-care/" },
-      { title: "General Janitorial", path: "/janitorial/" },
+      {
+        title: "Carpet & Floor Cleaning",
+        path: ROUTES.services.commercialFloorCare,
+      },
+      { title: "General Janitorial", path: ROUTES.janitorial },
     ],
   },
   commercialFloorCare: {
-    pathname: "/commercial-floor-care",
+    pathname: ROUTES.services.commercialFloorCare,
     seoTitle: "Commercial Carpet & Floor Cleaning San Diego | Good Steward",
     seoDescription:
       "Professional commercial carpet, floor, tile & grout cleaning in San Diego. Stain removal, deep cleaning & eco-friendly methods. Free quote.",
@@ -112,13 +122,16 @@ export const servicePages = {
     ],
     imageAlt: "Commercial carpet and floor cleaning in San Diego",
     relatedServices: [
-      { title: "Strip & Wax Services", path: "/strip-and-wax-floor-care/" },
-      { title: "Spot Cleaning", path: "/spot-cleaning/" },
-      { title: "General Janitorial", path: "/janitorial/" },
+      {
+        title: "Strip & Wax Services",
+        path: ROUTES.services.stripAndWaxFloorCare,
+      },
+      { title: "Spot Cleaning", path: ROUTES.services.spotCleaning },
+      { title: "General Janitorial", path: ROUTES.janitorial },
     ],
   },
   spotCleaning: {
-    pathname: "/spot-cleaning",
+    pathname: ROUTES.services.spotCleaning,
     seoTitle: "Spot Cleaning Services San Diego | Good Steward",
     seoDescription:
       "Fast, effective spot cleaning for stains and spills in San Diego offices & commercial spaces. Get a free quote from our in-house cleaning team.",
@@ -135,13 +148,19 @@ export const servicePages = {
     ],
     imageAlt: "Spot cleaning services in San Diego",
     relatedServices: [
-      { title: "Carpet & Floor Cleaning", path: "/commercial-floor-care/" },
-      { title: "Day Porter Services", path: "/day-porter-services/" },
-      { title: "General Janitorial", path: "/janitorial/" },
+      {
+        title: "Carpet & Floor Cleaning",
+        path: ROUTES.services.commercialFloorCare,
+      },
+      {
+        title: "Day Porter Services",
+        path: ROUTES.services.dayPorterServices,
+      },
+      { title: "General Janitorial", path: ROUTES.janitorial },
     ],
   },
   commercialWindowCleaning: {
-    pathname: "/commercial-window-cleaning",
+    pathname: ROUTES.services.commercialWindowCleaning,
     seoTitle: "Commercial Window Cleaning San Diego | Good Steward",
     seoDescription:
       "Interior & exterior commercial window cleaning in San Diego. Streak-free results for offices & commercial buildings. Request your free quote.",
@@ -158,12 +177,15 @@ export const servicePages = {
     ],
     imageAlt: "Commercial window cleaning in San Diego",
     relatedServices: [
-      { title: "General Janitorial", path: "/janitorial/" },
-      { title: "Carpet & Floor Cleaning", path: "/commercial-floor-care/" },
+      { title: "General Janitorial", path: ROUTES.janitorial },
+      {
+        title: "Carpet & Floor Cleaning",
+        path: ROUTES.services.commercialFloorCare,
+      },
     ],
   },
   greenCleaning: {
-    pathname: "/green-cleaning",
+    pathname: ROUTES.services.greenCleaning,
     seoTitle: "Green Cleaning Services San Diego | Good Steward",
     seoDescription:
       "Eco-friendly commercial green cleaning in San Diego using organic, biodegradable products. Sustainable results for your business. Free quote.",
@@ -180,13 +202,16 @@ export const servicePages = {
     ],
     imageAlt: "Green cleaning services in San Diego",
     relatedServices: [
-      { title: "Sanitation Cleaning", path: "/sanitation-cleaning/" },
-      { title: "Ozone Cleaning", path: "/ozone-cleaning/" },
-      { title: "General Janitorial", path: "/janitorial/" },
+      {
+        title: "Sanitation Cleaning",
+        path: ROUTES.services.sanitationCleaning,
+      },
+      { title: "Ozone Cleaning", path: ROUTES.services.ozoneCleaning },
+      { title: "General Janitorial", path: ROUTES.janitorial },
     ],
   },
   ozoneCleaning: {
-    pathname: "/ozone-cleaning",
+    pathname: ROUTES.services.ozoneCleaning,
     seoTitle: "Ozone Cleaning Services San Diego | Good Steward",
     seoDescription:
       "Advanced ozone cleaning in San Diego to eliminate odors, bacteria & viruses. A fresher, cleaner space for your business. Get a free quote today.",
@@ -203,9 +228,12 @@ export const servicePages = {
     ],
     imageAlt: "Ozone cleaning services in San Diego",
     relatedServices: [
-      { title: "Green Cleaning", path: "/green-cleaning/" },
-      { title: "Sanitation Cleaning", path: "/sanitation-cleaning/" },
-      { title: "General Janitorial", path: "/janitorial/" },
+      { title: "Green Cleaning", path: ROUTES.services.greenCleaning },
+      {
+        title: "Sanitation Cleaning",
+        path: ROUTES.services.sanitationCleaning,
+      },
+      { title: "General Janitorial", path: ROUTES.janitorial },
     ],
   },
 } satisfies Record<string, ServicePageConfig>

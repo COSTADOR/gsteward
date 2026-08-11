@@ -1,4 +1,5 @@
 import type { BreadcrumbItem } from "../components/common/breadcrumbs/breadcrumbs"
+import type { ServiceArea } from "../types/location.types"
 
 const SITE_URL = "https://www.gsteward.com"
 
@@ -6,6 +7,7 @@ interface ServiceSchemaOptions {
   name: string
   pathname: string
   serviceType: string
+  areaServed: ServiceArea
 }
 
 const toAbsoluteUrl = (pathname: string) =>
@@ -25,10 +27,11 @@ export const createBreadcrumbSchema = (
   })),
 })
 
-export const createSanDiegoServiceSchema = ({
+export const createServiceSchema = ({
   name,
   pathname,
   serviceType,
+  areaServed,
 }: ServiceSchemaOptions) => ({
   "@context": "https://schema.org",
   "@type": "Service",
@@ -43,19 +46,15 @@ export const createSanDiegoServiceSchema = ({
     telephone: "+18583797770",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "11440 W. Bernardo Court #300",
-      addressLocality: "San Diego",
-      addressRegion: "CA",
-      postalCode: "92127",
-      addressCountry: "US",
+      ...areaServed.officeAddress,
     },
   },
   areaServed: {
     "@type": "City",
-    name: "San Diego",
+    name: areaServed.city,
     containedInPlace: {
       "@type": "State",
-      name: "California",
+      name: areaServed.stateName,
     },
   },
 })

@@ -13,13 +13,19 @@ interface SeoProps {
 const toAbsoluteUrl = (value: string) =>
   value.startsWith("http") ? value : `${SITE_URL}${value}`
 
+const toPageUrl = (pathname: string) => {
+  const absoluteUrl = toAbsoluteUrl(pathname)
+
+  return absoluteUrl.endsWith("/") ? absoluteUrl : `${absoluteUrl}/`
+}
+
 const Seo: React.FC<SeoProps> = ({
   title,
   description,
   pathname,
   image = DEFAULT_IMAGE,
 }) => {
-  const pageUrl = toAbsoluteUrl(pathname)
+  const pageUrl = toPageUrl(pathname)
   const imageUrl = toAbsoluteUrl(image)
 
   return (

@@ -8,26 +8,32 @@ import ServiceHero from "../components/sections/service-hero/service-hero"
 import Seo from "../components/common/seo/seo"
 import Breadcrumbs from "../components/common/breadcrumbs/breadcrumbs"
 import StructuredData from "../components/common/structured-data/structured-data"
+import { ROUTES } from "../constants/routes.const"
+import { SERVICE_AREAS } from "../constants/service-areas.const"
 import {
   createBreadcrumbSchema,
-  createSanDiegoServiceSchema,
+  createServiceSchema,
 } from "../utils/service-schema"
 
 const seo = {
   title: "Commercial Maintenance Services San Diego | Good Steward",
   description:
     "Professional maintenance services in San Diego — handyman, remodeling, water damage restoration & air duct cleaning. Get a free quote today.",
-  pathname: "/maintenance",
+  pathname: ROUTES.maintenance,
 }
 
-const breadcrumbs = [{ label: "Home", path: "/" }, { label: "Maintenance" }]
+const breadcrumbs = [
+  { label: "Home", path: ROUTES.home },
+  { label: "Maintenance" },
+]
 
 const schemas = [
   createBreadcrumbSchema(breadcrumbs, seo.pathname),
-  createSanDiegoServiceSchema({
+  createServiceSchema({
     name: "Maintenance Services in San Diego",
     pathname: seo.pathname,
     serviceType: "Commercial maintenance services",
+    areaServed: SERVICE_AREAS.sanDiego,
   }),
 ]
 

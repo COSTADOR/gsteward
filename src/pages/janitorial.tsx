@@ -8,26 +8,32 @@ import ServiceHero from "../components/sections/service-hero/service-hero"
 import Seo from "../components/common/seo/seo"
 import Breadcrumbs from "../components/common/breadcrumbs/breadcrumbs"
 import StructuredData from "../components/common/structured-data/structured-data"
+import { ROUTES } from "../constants/routes.const"
+import { SERVICE_AREAS } from "../constants/service-areas.const"
 import {
   createBreadcrumbSchema,
-  createSanDiegoServiceSchema,
+  createServiceSchema,
 } from "../utils/service-schema"
 
 const seo = {
   title: "Janitorial Services in San Diego | Good Steward Cleaning",
   description:
     "Professional janitorial services in San Diego for offices, schools, medical & gyms — deep cleaning, sanitation, day porter & floor care. Free quote.",
-  pathname: "/janitorial",
+  pathname: ROUTES.janitorial,
 }
 
-const breadcrumbs = [{ label: "Home", path: "/" }, { label: "Janitorial" }]
+const breadcrumbs = [
+  { label: "Home", path: ROUTES.home },
+  { label: "Janitorial" },
+]
 
 const schemas = [
   createBreadcrumbSchema(breadcrumbs, seo.pathname),
-  createSanDiegoServiceSchema({
+  createServiceSchema({
     name: "Janitorial Services in San Diego",
     pathname: seo.pathname,
     serviceType: "Janitorial services",
+    areaServed: SERVICE_AREAS.sanDiego,
   }),
 ]
 
@@ -112,7 +118,7 @@ const Janitorial = () => {
       ],
       image: getImage(data.service2)!,
       imageAlt: "Commercial deep cleaning services in San Diego",
-      href: "/deep-cleaning/",
+      href: ROUTES.services.deepCleaning,
     },
     {
       title: "Sanitation Cleaning",
@@ -125,7 +131,7 @@ const Janitorial = () => {
       ],
       image: getImage(data.service3)!,
       imageAlt: "Sanitation cleaning services in San Diego",
-      href: "/sanitation-cleaning/",
+      href: ROUTES.services.sanitationCleaning,
     },
     {
       title: "Day Porter Services",
@@ -138,7 +144,7 @@ const Janitorial = () => {
       ],
       image: getImage(data.service4)!,
       imageAlt: "Day porter services in San Diego",
-      href: "/day-porter-services/",
+      href: ROUTES.services.dayPorterServices,
     },
     {
       title: "Strip & Wax Services",
@@ -151,7 +157,7 @@ const Janitorial = () => {
       ],
       image: getImage(data.service5)!,
       imageAlt: "Strip and wax floor services in San Diego",
-      href: "/strip-and-wax-floor-care/",
+      href: ROUTES.services.stripAndWaxFloorCare,
     },
     {
       title: "Carpet & Floor Cleaning",
@@ -164,7 +170,7 @@ const Janitorial = () => {
       ],
       image: getImage(data.service6)!,
       imageAlt: "Commercial carpet and floor cleaning in San Diego",
-      href: "/commercial-floor-care/",
+      href: ROUTES.services.commercialFloorCare,
     },
     {
       title: "Spot Cleaning",
@@ -177,7 +183,7 @@ const Janitorial = () => {
       ],
       image: getImage(data.service7)!,
       imageAlt: "Spot cleaning services in San Diego",
-      href: "/spot-cleaning/",
+      href: ROUTES.services.spotCleaning,
     },
     {
       title: "Window Cleaning",
@@ -190,7 +196,7 @@ const Janitorial = () => {
       ],
       image: getImage(data.service8)!,
       imageAlt: "Commercial window cleaning in San Diego",
-      href: "/commercial-window-cleaning/",
+      href: ROUTES.services.commercialWindowCleaning,
     },
     {
       title: "Green Cleaning",
@@ -203,7 +209,7 @@ const Janitorial = () => {
       ],
       image: getImage(data.service9)!,
       imageAlt: "Green cleaning services in San Diego",
-      href: "/green-cleaning/",
+      href: ROUTES.services.greenCleaning,
     },
     {
       title: "Ozone Cleaning",
@@ -216,7 +222,7 @@ const Janitorial = () => {
       ],
       image: getImage(data.service10)!,
       imageAlt: "Ozone cleaning services in San Diego",
-      href: "/ozone-cleaning/",
+      href: ROUTES.services.ozoneCleaning,
     },
   ]
   

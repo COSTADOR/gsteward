@@ -10,9 +10,11 @@ import Features from "../../sections/features/features"
 import RelatedServices from "../../sections/related-services/related-services"
 import CallToAction from "../../sections/call-to-action/call-to-action"
 import type { ServicePageConfig } from "../../../types/service-page.types"
+import { ROUTES } from "../../../constants/routes.const"
+import { SERVICE_AREAS } from "../../../constants/service-areas.const"
 import {
   createBreadcrumbSchema,
-  createSanDiegoServiceSchema,
+  createServiceSchema,
 } from "../../../utils/service-schema"
 
 const CTA_TITLE = "Not sure what service you need?"
@@ -25,8 +27,8 @@ interface ServiceLandingPageProps {
 }
 
 const getBreadcrumbs = (config: ServicePageConfig) => [
-  { label: "Home", path: "/" },
-  { label: "Janitorial", path: "/janitorial/" },
+  { label: "Home", path: ROUTES.home },
+  { label: "Janitorial", path: ROUTES.janitorial },
   { label: config.breadcrumbLabel },
 ]
 
@@ -35,10 +37,11 @@ const getSchemas = (config: ServicePageConfig) => {
 
   return [
     createBreadcrumbSchema(breadcrumbs, config.pathname),
-    createSanDiegoServiceSchema({
+    createServiceSchema({
       name: config.h1,
       pathname: config.pathname,
       serviceType: config.serviceType,
+      areaServed: SERVICE_AREAS.sanDiego,
     }),
   ]
 }
