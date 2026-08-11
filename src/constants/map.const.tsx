@@ -3,9 +3,19 @@ export const center = {
   lng: -117.226024,
 }
 
+export const SAN_DIEGO_OFFICE_LOCATION = {
+  lat: 33.022137006444524,
+  lng: -117.08270008686802,
+}
+
+export const OCEANSIDE_OFFICE_LOCATION = {
+  lat: 33.19030419963578,
+  lng: -117.32834495352454,
+}
+
 export const markers = [
-  { lat: 33.022137006444524, lng: -117.08270008686802 },
-  { lat: 33.19030419963578, lng: -117.32834495352454 },
+  SAN_DIEGO_OFFICE_LOCATION,
+  OCEANSIDE_OFFICE_LOCATION,
 ]
 
 export const G_API_KEY = process.env.GATSBY_GOOGLE_MAPS_API_KEY;

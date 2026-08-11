@@ -1,0 +1,47 @@
+@use "../../../styles/mixins" as *;
+
+.office-location {
+  margin-bottom: var(--spacing-xl);
+
+  &__container {
+    display: flex;
+    gap: 56px;
+    padding: var(--spacing-xl);
+    border-radius: 20px;
+    background: var(--primary-25);
+
+    @include md {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  &__subtitle {
+    font-size: var(--subtitle);
+    text-transform: uppercase;
+  }
+
+  &__address {
+    font-size: var(--heading-sm);
+    font-style: normal;
+  }
+
+  &__description {
+    color: var(--text-secondary);
+  }
+
+  &__map {
+    min-height: 400px;
+    flex: 1;
+    overflow: hidden;
+    border-radius: 16px;
+
+  }
+}
