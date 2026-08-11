@@ -5,6 +5,14 @@ import Layout from "../components/common/layout/layout"
 import CallToAction from "../components/sections/call-to-action/call-to-action"
 import ServiceList from "../components/sections/service-list/service-list"
 import ServiceHero from "../components/sections/service-hero/service-hero"
+import Seo from "../components/common/seo/seo"
+
+const seo = {
+  title: "Janitorial Services in San Diego | Good Steward Cleaning",
+  description:
+    "Professional janitorial services in San Diego for offices, schools, medical & gyms — deep cleaning, sanitation, day porter & floor care. Free quote.",
+  pathname: "/janitorial",
+}
 
 const Janitorial = () => {
   const data = useStaticQuery(graphql`
@@ -192,21 +200,6 @@ const Janitorial = () => {
   )
 }
 
-export const Head = () => (
-  <>
-    <title>Janitorial Services in San Diego | Good Steward Cleaning</title>
-    <meta name="description" content="Professional janitorial services in San Diego for offices, schools, medical & gyms — deep cleaning, sanitation, day porter & floor care. Free quote." />
-    <meta property="og:title" content="Janitorial Services in San Diego | Good Steward Cleaning" />
-    <meta property="og:description" content="Professional janitorial services in San Diego for offices, schools, medical & gyms — deep cleaning, sanitation, day porter & floor care. Free quote." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://www.gsteward.com/images/og-image.png" />
-    <meta property="og:url" content="https://www.gsteward.com/janitorial" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Janitorial Services in San Diego | Good Steward Cleaning" />
-    <meta name="twitter:description" content="Professional janitorial services in San Diego for offices, schools, medical & gyms — deep cleaning, sanitation, day porter & floor care. Free quote." />
-    <meta name="twitter:image" content="https://www.gsteward.com/images/og-image.png" />
-    <link rel="canonical" href="https://www.gsteward.com/janitorial" />
-  </>
-)
+export const Head = () => <Seo {...seo} />
 
 export default Janitorial
