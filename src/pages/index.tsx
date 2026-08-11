@@ -6,6 +6,14 @@ import Steps from "../components/sections/steps/steps"
 import Features from "../components/sections/features/features"
 import MainServices from "../components/sections/main-services/main-services"
 import Contact from "../components/sections/contact/contact"
+import Seo from "../components/common/seo/seo"
+
+const seo = {
+  title: "Commercial & Office Cleaning San Diego | Good Steward",
+  description:
+    "Reliable commercial & office cleaning in San Diego & Oceanside. Good Steward's in-house team delivers custom, dependable service. Get a free quote today.",
+  pathname: "/",
+}
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -39,20 +47,6 @@ const IndexPage = () => {
   )
 }
 
-export const Head = () => (
-  <>
-    <title>Commercial & Office Cleaning San Diego | Good Steward</title>
-    <meta name="description" content="Reliable commercial & office cleaning in San Diego & Oceanside. Good Steward's in-house team delivers custom, dependable service. Get a free quote today." />
-    <meta property="og:title" content="Commercial & Office Cleaning San Diego | Good Steward" />
-    <meta property="og:description" content="Reliable commercial & office cleaning in San Diego & Oceanside. Good Steward's in-house team delivers custom, dependable service. Get a free quote today." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://www.gsteward.com/images/og-image.png" />
-    <meta property="og:url" content="https://www.gsteward.com/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Commercial & Office Cleaning San Diego | Good Steward" />
-    <meta name="twitter:description" content="Reliable commercial & office cleaning in San Diego & Oceanside. Good Steward's in-house team delivers custom, dependable service. Get a free quote today." />
-    <meta name="twitter:image" content="https://www.gsteward.com/images/og-image.png" />
-  </>
-)
+export const Head = () => <Seo {...seo} />
 
 export default IndexPage

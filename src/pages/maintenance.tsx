@@ -5,6 +5,14 @@ import Layout from "../components/common/layout/layout"
 import CallToAction from "../components/sections/call-to-action/call-to-action"
 import ServiceList from "../components/sections/service-list/service-list"
 import ServiceHero from "../components/sections/service-hero/service-hero"
+import Seo from "../components/common/seo/seo"
+
+const seo = {
+  title: "Commercial Property Maintenance San Diego | Good Steward",
+  description:
+    "Commercial property maintenance in San Diego: handyman, tenant improvements, remodeling, water damage restoration & more. Keep your facility at its best.",
+  pathname: "/maintenance",
+}
 
 const Maintenance = () => {
   // Загружаем изображения через GraphQL
@@ -128,21 +136,6 @@ const Maintenance = () => {
   )
 }
 
-export const Head = () => (
-  <>
-    <title>Commercial Property Maintenance San Diego | Good Steward</title>
-    <meta name="description" content="Commercial property maintenance in San Diego: handyman, tenant improvements, remodeling, water damage restoration & more. Keep your facility at its best." />
-    <meta property="og:title" content="Commercial Property Maintenance San Diego | Good Steward" />
-    <meta property="og:description" content="Commercial property maintenance in San Diego: handyman, tenant improvements, remodeling, water damage restoration & more. Keep your facility at its best." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://www.gsteward.com/images/og-image.png" />
-    <meta property="og:url" content="https://www.gsteward.com/maintenance" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Commercial Property Maintenance San Diego | Good Steward" />
-    <meta name="twitter:description" content="Commercial property maintenance in San Diego: handyman, tenant improvements, remodeling, water damage restoration & more. Keep your facility at its best." />
-    <meta name="twitter:image" content="https://www.gsteward.com/images/og-image.png" />
-    <link rel="canonical" href="https://www.gsteward.com/maintenance" />
-  </>
-)
+export const Head = () => <Seo {...seo} />
 
 export default Maintenance
