@@ -19,6 +19,7 @@ export interface GeoHubPageConfig extends BaseGeoPageConfig {
   variant: "hub"
   serviceCards: RelatedServiceLink[]
   specialtyServices: RelatedServiceLink[]
+  supportServices: RelatedServiceLink[]
 }
 
 export interface GeoDetailPageConfig extends BaseGeoPageConfig {

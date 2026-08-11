@@ -23,6 +23,11 @@
     text-transform: uppercase;
   }
 
+  &__description {
+    max-width: 760px;
+    color: var(--text-secondary);
+  }
+
   &__links {
     display: flex;
     flex-wrap: wrap;

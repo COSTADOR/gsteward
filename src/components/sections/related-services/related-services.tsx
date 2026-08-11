@@ -9,15 +9,24 @@ interface RelatedService {
 
 interface RelatedServicesProps {
   services: RelatedService[]
+  subtitle?: string
+  title?: string
+  description?: string
 }
 
-const RelatedServices: React.FC<RelatedServicesProps> = ({ services }) => (
+const RelatedServices: React.FC<RelatedServicesProps> = ({
+  services,
+  subtitle = "Related Services",
+  title = "Explore more cleaning services",
+  description,
+}) => (
   <section className="related-services">
     <div className="related-services__container container">
-      <div className="related-services__subtitle">Related Services</div>
-      <h2 className="related-services__title title-lg">
-        Explore more cleaning services
-      </h2>
+      <div className="related-services__subtitle">{subtitle}</div>
+      <h2 className="related-services__title title-lg">{title}</h2>
+      {description && (
+        <p className="related-services__description">{description}</p>
+      )}
       <div className="related-services__links">
         {services.map(service => (
           <Link

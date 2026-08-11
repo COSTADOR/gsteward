@@ -45,6 +45,9 @@ export const geoPages = {
       { title: "Deep Cleaning", path: ROUTES.services.deepCleaning },
       { title: "Green Cleaning", path: ROUTES.services.greenCleaning },
     ],
+    supportServices: [
+      { title: "Maintenance Services", path: ROUTES.maintenance },
+    ],
   },
   officeCleaningSanDiego: {
     variant: "detail",
@@ -102,6 +105,10 @@ export const geoPages = {
     imageAlt: "Medical office cleaning services in San Diego",
     relatedServices: [
       {
+        title: "Commercial Cleaning — San Diego",
+        path: ROUTES.serviceAreas.commercialCleaningSanDiego,
+      },
+      {
         title: "Sanitation Cleaning",
         path: ROUTES.services.sanitationCleaning,
       },
@@ -131,6 +138,10 @@ export const geoPages = {
     ],
     imageAlt: "Commercial kitchen and restroom cleaning in San Diego",
     relatedServices: [
+      {
+        title: "Commercial Cleaning — San Diego",
+        path: ROUTES.serviceAreas.commercialCleaningSanDiego,
+      },
       {
         title: "Sanitation Cleaning",
         path: ROUTES.services.sanitationCleaning,
