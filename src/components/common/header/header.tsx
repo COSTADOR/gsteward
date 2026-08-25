@@ -144,8 +144,8 @@ const Header: React.FC = () => {
   const janitorialIsCurrent = JANITORIAL_NAV_ITEMS.some(
     item => item.path === location.pathname
   )
-  const serviceAreasIsCurrent = SERVICE_AREA_NAV_ITEMS.some(
-    item => item.path === location.pathname
+  const serviceAreasIsCurrent = Object.values(ROUTES.serviceAreas).some(
+    path => path === location.pathname
   )
 
   return (

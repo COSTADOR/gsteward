@@ -34,23 +34,11 @@ export const JANITORIAL_NAV_ITEMS: NavigationLink[] = [
 
 export const SERVICE_AREA_NAV_ITEMS: NavigationLink[] = [
   {
-    name: "Commercial Cleaning — San Diego",
+    name: "San Diego",
     path: ROUTES.serviceAreas.commercialCleaningSanDiego,
   },
   {
-    name: "Office Cleaning — San Diego",
-    path: ROUTES.serviceAreas.officeCleaningSanDiego,
-  },
-  {
-    name: "Medical Office Cleaning — San Diego",
-    path: ROUTES.serviceAreas.medicalOfficeCleaningSanDiego,
-  },
-  {
-    name: "Kitchen & Restroom Cleaning — San Diego",
-    path: ROUTES.serviceAreas.commercialKitchenCleaningSanDiego,
-  },
-  {
-    name: "Commercial Cleaning — Oceanside",
+    name: "Oceanside",
     path: ROUTES.serviceAreas.commercialCleaningOceanside,
   },
 ]
