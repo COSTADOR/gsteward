@@ -10,7 +10,7 @@ import {
 } from "../../../constants/map.const"
 import { CONTACT_INFO } from "../../../constants/contacts.const"
 import { SERVICE_AREA_LIST } from "../../../constants/service-areas.const"
-import { formatPostalAddress } from "../../../utils/address"
+import AddressLink from "../../common/address-link/address-link"
 
 const LetsConnect: React.FC = () => {
   return (
@@ -42,7 +42,10 @@ const LetsConnect: React.FC = () => {
                   {serviceArea.officeLabel}
                 </p>
                 <p className="lets-connect__text">
-                  {formatPostalAddress(serviceArea.officeAddress)}
+                  <AddressLink
+                    address={serviceArea.officeAddress}
+                    googleMapsUrl={serviceArea.googleMapsUrl}
+                  />
                 </p>
                 <hr className="lets-connect__divider" />
               </React.Fragment>

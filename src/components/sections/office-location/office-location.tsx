@@ -7,17 +7,20 @@ import {
   OCEANSIDE_OFFICE_LOCATION,
 } from "../../../constants/map.const"
 import type { PostalAddress } from "../../../types/location.types"
-import { formatPostalAddress } from "../../../utils/address"
+import AddressLink from "../../common/address-link/address-link"
 import "./office-location.scss"
 
 interface OfficeLocationProps {
   label: string
   address: PostalAddress
+  googleMapsUrl: string
 }
 
-const OfficeLocation: React.FC<OfficeLocationProps> = ({ label, address }) => {
-  const formattedAddress = formatPostalAddress(address)
-
+const OfficeLocation: React.FC<OfficeLocationProps> = ({
+  label,
+  address,
+  googleMapsUrl,
+}) => {
   return (
     <section className="office-location">
       <div className="office-location__container container">
@@ -25,7 +28,7 @@ const OfficeLocation: React.FC<OfficeLocationProps> = ({ label, address }) => {
           <div className="office-location__subtitle">Local Office</div>
           <h2 className="office-location__title title-lg">{label}</h2>
           <address className="office-location__address">
-            {formattedAddress}
+            <AddressLink address={address} googleMapsUrl={googleMapsUrl} />
           </address>
           <p className="office-location__description">
             Locally based in Oceanside, our team provides dependable commercial

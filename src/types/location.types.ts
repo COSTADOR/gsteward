@@ -12,5 +12,6 @@ export interface ServiceArea {
   stateCode: string
   stateName: string
   countryCode: string
+  googleMapsUrl: string
   officeAddress: PostalAddress
 }

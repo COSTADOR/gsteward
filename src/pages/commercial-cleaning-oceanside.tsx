@@ -34,6 +34,7 @@ const CommercialCleaningOceanside = () => {
       <OfficeLocation
         label={config.officeLabel}
         address={config.areaServed.officeAddress}
+        googleMapsUrl={config.areaServed.googleMapsUrl}
       />
     </GeoDetailLandingPage>
   )

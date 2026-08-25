@@ -11,7 +11,7 @@ import {
 } from "../../../constants/map.const"
 import { CONTACT_INFO } from "../../../constants/contacts.const"
 import { SERVICE_AREA_LIST } from "../../../constants/service-areas.const"
-import { formatPostalAddress } from "../../../utils/address"
+import AddressLink from "../../common/address-link/address-link"
 
 const Contact: React.FC = () => {
   return (
@@ -29,7 +29,10 @@ const Contact: React.FC = () => {
                   {serviceArea.officeLabel}
                 </p>
                 <p className="contact__text">
-                  {formatPostalAddress(serviceArea.officeAddress)}
+                  <AddressLink
+                    address={serviceArea.officeAddress}
+                    googleMapsUrl={serviceArea.googleMapsUrl}
+                  />
                 </p>
               </React.Fragment>
             ))}

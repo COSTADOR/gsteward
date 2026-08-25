@@ -7,6 +7,7 @@ export const SERVICE_AREAS = {
     stateCode: "CA",
     stateName: "California",
     countryCode: "US",
+    googleMapsUrl: "https://share.google/o1PnNoRh6SnMD7bt9",
     officeAddress: {
       streetAddress: "11440 W. Bernardo Court #300",
       addressLocality: "San Diego",
@@ -21,6 +22,7 @@ export const SERVICE_AREAS = {
     stateCode: "CA",
     stateName: "California",
     countryCode: "US",
+    googleMapsUrl: "https://share.google/gqjDlH2H19O6I7tdl",
     officeAddress: {
       streetAddress: "2103 S El Camino Real #105C",
       addressLocality: "Oceanside",

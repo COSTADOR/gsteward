@@ -9,7 +9,7 @@ import {
   SERVICE_AREA_NAV_ITEMS,
   type NavigationLink,
 } from "../../../data/navigation.data"
-import { formatPostalAddress } from "../../../utils/address"
+import AddressLink from "../address-link/address-link"
 import "./footer.scss"
 
 interface FooterLinksProps {
@@ -61,7 +61,10 @@ const Footer = () => (
             <h2 className="footer__title">Contact Us</h2>
             {SERVICE_AREA_LIST.map(serviceArea => (
               <p key={serviceArea.city} className="footer__text">
-                {formatPostalAddress(serviceArea.officeAddress)}
+                <AddressLink
+                  address={serviceArea.officeAddress}
+                  googleMapsUrl={serviceArea.googleMapsUrl}
+                />
               </p>
             ))}
             <p className="footer__text">
