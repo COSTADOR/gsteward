@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.gsteward.com/sitemap-index.xml
+
+# LLM metadata
+# https://www.gsteward.com/llms.txt
