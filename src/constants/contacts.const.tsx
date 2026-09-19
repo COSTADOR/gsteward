@@ -1,9 +1,12 @@
 const PHONE_E164 = "+18583797770"
 const EMAIL = "gsteward7770@gmail.com"
+const PRIVACY_EMAIL = "admin@gsteward.com"
 
 export const CONTACT_INFO = {
   email: EMAIL,
   emailHref: `mailto:${EMAIL}`,
+  privacyEmail: PRIVACY_EMAIL,
+  privacyEmailHref: `mailto:${PRIVACY_EMAIL}`,
   phone: "+1 (858)-379-7770",
   phoneE164: PHONE_E164,
   phoneHref: `tel:${PHONE_E164}`,

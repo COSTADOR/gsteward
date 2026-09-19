@@ -74,8 +74,12 @@ const Footer = () => (
         </div>
       </div>
       <div className="footer__bottom">
-        &copy; {new Date().getFullYear()} Good Steward Cleaning. All Rights
-        Reserved.
+        <span>
+          &copy; {new Date().getFullYear()} Good Steward Cleaning. All Rights
+          Reserved.
+        </span>
+        <Link to={ROUTES.legal.privacyPolicy}>Privacy Policy</Link>
+        <Link to={ROUTES.legal.termsOfService}>Terms of Service</Link>
       </div>
     </div>
   </footer>
