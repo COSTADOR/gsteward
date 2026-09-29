@@ -46,6 +46,7 @@ export const SERVICE_AREA_NAV_ITEMS: NavigationLink[] = [
 export const COMPANY_NAV_ITEMS: NavigationLink[] = [
   { name: "Home", path: ROUTES.home },
   { name: "About Us", path: ROUTES.aboutUs },
+  { name: "FAQ", path: ROUTES.faq },
   { name: "Contact Us", path: ROUTES.contactUs },
 ]
 

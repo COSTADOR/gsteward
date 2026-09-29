@@ -5,7 +5,7 @@ import "./service-hero.scss"
 interface ServiceHeroProps {
   subtitle: string
   title: string
-  description: string
+  description: React.ReactNode
   breadcrumbs?: React.ReactNode
 }
 
@@ -34,7 +34,8 @@ const ServiceHero: React.FC<ServiceHeroProps> = ({
         {/*</div>*/}
         <div className="service-hero__cta">
           <p>
-            Let’s get started on your cleaning project — contact us today for your personalized quote!
+            Let’s get started on your cleaning project — contact us today for
+            your personalized quote!
           </p>
           <Link to="/contact-us" className="button button--primary with-icon">
             Contact Us

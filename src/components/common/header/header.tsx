@@ -246,6 +246,16 @@ const Header: React.FC = () => {
                 About Us
               </Link>
             </li>
+            <li className="header__nav-item">
+              <Link
+                to={ROUTES.faq}
+                className="header__nav-link"
+                activeClassName="header__nav-link--active"
+                onClick={closeNavigation}
+              >
+                FAQ
+              </Link>
+            </li>
             <li className="header__nav-item header__nav-item--mobile-contact">
               <Link
                 to={ROUTES.contactUs}

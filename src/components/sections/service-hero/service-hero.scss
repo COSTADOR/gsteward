@@ -25,6 +25,18 @@
     margin-bottom: 32px;
   }
 
+  &__description a {
+    color: var(--primary-400);
+    font-weight: var(--weight-semibold);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--text-primary-hover);
+    }
+  }
+
   //&__stats {
   //  background: var(--primary-25);
   //  border-radius: 20px;
