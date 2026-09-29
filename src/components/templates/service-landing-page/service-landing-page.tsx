@@ -6,6 +6,7 @@ import Seo from "../../common/seo/seo"
 import StructuredData from "../../common/structured-data/structured-data"
 import ServiceHero from "../../sections/service-hero/service-hero"
 import ServiceOverview from "../../sections/service-overview/service-overview"
+import ServiceContent from "../../sections/service-content/service-content"
 import Features from "../../sections/features/features"
 import RelatedServices from "../../sections/related-services/related-services"
 import CallToAction from "../../sections/call-to-action/call-to-action"
@@ -63,6 +64,7 @@ export const ServiceLandingPage: React.FC<ServiceLandingPageProps> = ({
       image={image}
       imageAlt={config.imageAlt}
     />
+    <ServiceContent text={config.content} links={config.contentLinks} />
     <Features />
     <RelatedServices services={config.relatedServices} />
     <CallToAction title={CTA_TITLE} description={CTA_DESCRIPTION} />

@@ -222,7 +222,8 @@ const PrivacyPolicy = () => (
             <a href={CONTACT_INFO.privacyEmailHref}>
               {CONTACT_INFO.privacyEmail}
             </a>{" "}
-            or call <a href={CONTACT_INFO.phoneHref}>(858) 379-7770</a>. We
+            or call{" "}
+            <a href={CONTACT_INFO.phoneHref}>{CONTACT_INFO.phoneLocal}</a>. We
             will respond within a reasonable time and may ask you for
             information that allows us to verify your identity before we act on
             the request. We will not discriminate against you for exercising
@@ -309,11 +310,13 @@ const PrivacyPolicy = () => (
                 googleMapsUrl={serviceArea.googleMapsUrl}
               />
             ))}
-            <a href={CONTACT_INFO.phoneHref}>Phone: (858) 379-7770</a>
+            <a href={CONTACT_INFO.phoneHref}>
+              Phone: {CONTACT_INFO.phoneLocal}
+            </a>
             <a href={CONTACT_INFO.privacyEmailHref}>
               Email: {CONTACT_INFO.privacyEmail}
             </a>
-            <span>Hours: Monday–Friday, 9:00 AM – 6:00 PM PT</span>
+            <span>Hours: {CONTACT_INFO.legalHours}</span>
           </address>
         </section>
       </div>

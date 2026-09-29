@@ -203,7 +203,7 @@ const TermsOfService = () => (
           <p>
             A current certificate of insurance is available to clients and
             prospective clients on request. Contact us at{" "}
-            <a href={CONTACT_INFO.phoneHref}>(858) 379-7770</a> or{" "}
+            <a href={CONTACT_INFO.phoneHref}>{CONTACT_INFO.phoneLocal}</a> or{" "}
             <a href={CONTACT_INFO.privacyEmailHref}>
               {CONTACT_INFO.privacyEmail}
             </a>{" "}
@@ -221,7 +221,8 @@ const TermsOfService = () => (
             <a href={CONTACT_INFO.privacyEmailHref}>
               {CONTACT_INFO.privacyEmail}
             </a>{" "}
-            or call <a href={CONTACT_INFO.phoneHref}>(858) 379-7770</a>, and
+            or call{" "}
+            <a href={CONTACT_INFO.phoneHref}>{CONTACT_INFO.phoneLocal}</a>, and
             include photographs and a description of the issue and its
             location.
           </p>
@@ -398,11 +399,13 @@ const TermsOfService = () => (
                 googleMapsUrl={serviceArea.googleMapsUrl}
               />
             ))}
-            <a href={CONTACT_INFO.phoneHref}>Phone: (858) 379-7770</a>
+            <a href={CONTACT_INFO.phoneHref}>
+              Phone: {CONTACT_INFO.phoneLocal}
+            </a>
             <a href={CONTACT_INFO.privacyEmailHref}>
               Email: {CONTACT_INFO.privacyEmail}
             </a>
-            <span>Hours: Monday–Friday, 9:00 AM – 6:00 PM PT</span>
+            <span>Hours: {CONTACT_INFO.legalHours}</span>
           </address>
         </section>
       </div>

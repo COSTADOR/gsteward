@@ -13,6 +13,16 @@ export const servicePages = {
     serviceType: "Commercial Deep Cleaning",
     introduction:
       "When your space requires more than surface-level care, our deep cleaning services tackle every nook and cranny, leaving your San Diego facility refreshed and immaculate.",
+    content:
+      "When everyday janitorial care isn't enough, Good Steward Cleaning's deep cleaning services give your San Diego facility the thorough, top-to-bottom attention it needs. Our in-house team tackles high-touch surface sanitization, furniture and floor detailing, and hard-to-reach areas that routine cleaning skips — baseboards, vents, and behind equipment. Commercial deep cleaning in San Diego works well as a seasonal reset, pre-inspection prep, or one-time refresh before a big event. Pair it with our Sanitation Cleaning for a health-focused finish, or ask about Green Cleaning if eco-friendly products matter to your team. Deep cleaning is one part of our full janitorial services lineup — contact us for a free quote and walkthrough.",
+    contentLinks: [
+      {
+        label: "Sanitation Cleaning",
+        path: ROUTES.services.sanitationCleaning,
+      },
+      { label: "Green Cleaning", path: ROUTES.services.greenCleaning },
+      { label: "janitorial services", path: ROUTES.janitorial },
+    ],
     included: [
       "High-touch surface sanitization",
       "Furniture and floor detailing",
@@ -39,6 +49,14 @@ export const servicePages = {
     serviceType: "Sanitation Cleaning",
     introduction:
       "Prioritize health and safety with our specialized sanitation cleaning services in San Diego. Using advanced techniques and EPA-approved products, we create a hygienic environment for staff and visitors.",
+    content:
+      "Good Steward Cleaning's sanitation cleaning services help San Diego businesses meet a higher standard of hygiene. Using EPA-approved disinfectants and proven protocols, our in-house team targets high-touch surfaces — door handles, light switches, shared equipment, and restrooms — to reduce the spread of germs across offices, medical suites, schools, and gyms. Every sanitation plan is customized to your facility's traffic, industry, and compliance needs. Sanitation Cleaning pairs naturally with our Deep Cleaning for a complete reset, or Green Cleaning and Ozone Cleaning for facilities that need odor and pathogen control. Explore our full janitorial services or request a free quote today.",
+    contentLinks: [
+      { label: "Deep Cleaning", path: ROUTES.services.deepCleaning },
+      { label: "Green Cleaning", path: ROUTES.services.greenCleaning },
+      { label: "Ozone Cleaning", path: ROUTES.services.ozoneCleaning },
+      { label: "janitorial services", path: ROUTES.janitorial },
+    ],
     included: [
       "Disinfection of high-traffic areas",
       "Customized solutions for specific needs",
@@ -63,6 +81,16 @@ export const servicePages = {
     serviceType: "Day Porter Services",
     introduction:
       "Keep your San Diego facility consistently clean throughout the day with our day porter services. From restocking restrooms to maintaining lobbies, we ensure your space remains welcoming.",
+    content:
+      "A clean facility isn't a once-a-day event — it needs attention throughout the workday, and that's exactly what Good Steward Cleaning's day porter services provide in San Diego. Our in-house day porters restock restroom supplies, empty trash continuously, wipe down high-traffic surfaces, and keep lobbies, breakrooms, and common areas presentable from open to close. This service is especially valuable for busy offices, retail centers, and medical facilities where appearance and hygiene matter all day long. Day porter service works well alongside our Sanitation Cleaning and Spot Cleaning for spills and stains. It's one option within our complete janitorial services in San Diego — contact us to build a coverage schedule that fits your hours.",
+    contentLinks: [
+      {
+        label: "Sanitation Cleaning",
+        path: ROUTES.services.sanitationCleaning,
+      },
+      { label: "Spot Cleaning", path: ROUTES.services.spotCleaning },
+      { label: "janitorial services", path: ROUTES.janitorial },
+    ],
     included: [
       "Restocking restroom supplies",
       "Continuous trash removal",
@@ -89,6 +117,15 @@ export const servicePages = {
     serviceType: "Strip and Wax Floor Services",
     introduction:
       "Bring your San Diego floors back to life with our strip and wax service. We remove old finishes, apply high-quality wax, and polish your floors for a durable and glossy look.",
+    content:
+      "Worn, dull, or scuffed floors send the wrong message about your San Diego business. Good Steward Cleaning's strip and wax services restore vinyl composition tile and other hard floors to a like-new shine — stripping away old, yellowed finish, then applying fresh protective wax and buffing to a durable gloss. This service extends the life of your flooring and cuts long-term maintenance costs by protecting the surface from scuffs and stains. Strip and wax works best on a scheduled rotation alongside our Carpet & Floor Cleaning services for facilities with mixed flooring. It's part of our complete janitorial services lineup for San Diego offices, schools, and retail spaces — request a free floor care quote today.",
+    contentLinks: [
+      {
+        label: "Carpet & Floor Cleaning",
+        path: ROUTES.services.commercialFloorCare,
+      },
+      { label: "janitorial services", path: ROUTES.janitorial },
+    ],
     included: [
       "Removal of old floor finishes",
       "Application of protective wax layers",
@@ -114,6 +151,16 @@ export const servicePages = {
     serviceType: "Commercial Carpet and Floor Cleaning",
     introduction:
       "Extend the life of your carpets and floors with our professional carpet, tile & grout cleaning services in San Diego.",
+    content:
+      "Carpets, tile, and grout take a beating in high-traffic commercial spaces, and Good Steward Cleaning keeps San Diego facilities looking their best. Our commercial carpet cleaning removes embedded dirt, stains, and odors using fabric-safe, eco-conscious methods, while our tile and grout cleaning lifts ground-in grime that mopping alone can't reach. Regular commercial floor cleaning protects your flooring investment and creates a healthier indoor environment. For hard floors that need a full restoration, pair this service with Strip & Wax, or add Spot Cleaning for fast response between scheduled visits. See our complete janitorial services or contact us for a free San Diego floor care quote.",
+    contentLinks: [
+      {
+        label: "Strip & Wax",
+        path: ROUTES.services.stripAndWaxFloorCare,
+      },
+      { label: "Spot Cleaning", path: ROUTES.services.spotCleaning },
+      { label: "janitorial services", path: ROUTES.janitorial },
+    ],
     included: [
       "Stain removal and deep cleaning",
       "Texture revitalization",
@@ -141,6 +188,19 @@ export const servicePages = {
     serviceType: "Spot Cleaning",
     introduction:
       "Quick and effective spot cleaning services to address stains and spills promptly, keeping your San Diego facility looking its best.",
+    content:
+      "Spills and stains don't wait for your next scheduled cleaning, and neither does Good Steward Cleaning. Our spot cleaning service gives San Diego businesses a fast, targeted response to stains on carpets, upholstery, and hard surfaces — removing coffee spills, food stains, and stubborn marks before they set in and become permanent. Using specialized solutions matched to each surface, our in-house team works efficiently with minimal drying time, so your space stays presentable without disrupting your day. Spot cleaning complements our broader Carpet & Floor Cleaning and Day Porter Services for facilities that need ongoing attention. It's part of our full janitorial services in San Diego — contact us to add spot cleaning to your plan.",
+    contentLinks: [
+      {
+        label: "Carpet & Floor Cleaning",
+        path: ROUTES.services.commercialFloorCare,
+      },
+      {
+        label: "Day Porter Services",
+        path: ROUTES.services.dayPorterServices,
+      },
+      { label: "janitorial services", path: ROUTES.janitorial },
+    ],
     included: [
       "Stain removal for furniture, carpets, and surfaces",
       "Specialized solutions for stubborn marks",
@@ -170,6 +230,15 @@ export const servicePages = {
     serviceType: "Commercial Window Cleaning",
     introduction:
       "Enhance the appearance of your San Diego building with crystal-clear windows that let in more light.",
+    content:
+      "Streaky, smudged windows dull the natural light and curb appeal of any San Diego business. Good Steward Cleaning's commercial window cleaning service delivers a streak-free finish for storefronts, office buildings, and lobbies — inside and out. Our trained, in-house team uses safe techniques suited to every type of glass, from ground-floor storefronts to multi-pane office partitions, removing dust, fingerprints, and grime that build up between visits. Clean windows brighten your space and create a stronger first impression for clients and employees. Combine window cleaning with our Carpet & Floor Cleaning services for a complete facility refresh, or explore our full janitorial services in San Diego. Contact us for a free window cleaning quote.",
+    contentLinks: [
+      {
+        label: "Carpet & Floor Cleaning",
+        path: ROUTES.services.commercialFloorCare,
+      },
+      { label: "janitorial services", path: ROUTES.janitorial },
+    ],
     included: [
       "Interior and exterior window cleaning",
       "Streak and smudge removal",
@@ -195,6 +264,16 @@ export const servicePages = {
     serviceType: "Commercial Green Cleaning",
     introduction:
       "Our eco-friendly cleaning solutions provide the same exceptional results while minimizing environmental impact — perfect for San Diego businesses that value sustainability.",
+    content:
+      "More San Diego businesses are choosing sustainable operations, and Good Steward Cleaning's green cleaning service delivers the same exceptional results without harsh chemicals. Our in-house team uses organic, biodegradable products and practices that reduce water and energy use — creating a healthier indoor environment for employees and visitors while minimizing your facility's environmental footprint. Green cleaning is a smart choice for offices, schools, medical suites, and any business prioritizing indoor air quality. It pairs well with our Sanitation Cleaning for health-focused facilities, or Ozone Cleaning for advanced odor control. Green Cleaning is available across our full janitorial services lineup in San Diego — ask about eco-friendly options with your free quote.",
+    contentLinks: [
+      {
+        label: "Sanitation Cleaning",
+        path: ROUTES.services.sanitationCleaning,
+      },
+      { label: "Ozone Cleaning", path: ROUTES.services.ozoneCleaning },
+      { label: "janitorial services", path: ROUTES.janitorial },
+    ],
     included: [
       "Use of organic and biodegradable products",
       "Practices that reduce water and energy usage",
@@ -221,6 +300,16 @@ export const servicePages = {
     serviceType: "Ozone Cleaning",
     introduction:
       "Using cutting-edge ozone technology, we eliminate odors, bacteria, and viruses to create a cleaner and fresher space for your San Diego business.",
+    content:
+      "Persistent odors, bacteria, and airborne viruses need more than surface cleaning to eliminate — that's where Good Steward Cleaning's ozone cleaning service comes in. Using advanced ozone technology, our in-house team neutralizes odors at the source and disinfects air and surfaces throughout your San Diego facility, reaching areas that traditional cleaning methods miss. Ozone treatment is effective against bacteria, viruses, mold, and allergens, making it ideal for facilities recovering from water damage or requiring an extra layer of disinfection. Ozone cleaning pairs naturally with our Sanitation Cleaning and Green Cleaning services. Explore our complete janitorial services in San Diego or contact us to discuss whether ozone treatment fits your needs.",
+    contentLinks: [
+      {
+        label: "Sanitation Cleaning",
+        path: ROUTES.services.sanitationCleaning,
+      },
+      { label: "Green Cleaning", path: ROUTES.services.greenCleaning },
+      { label: "janitorial services", path: ROUTES.janitorial },
+    ],
     included: [
       "Odor neutralization",
       "Air and surface disinfection",

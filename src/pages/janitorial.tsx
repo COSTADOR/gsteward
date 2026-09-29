@@ -5,6 +5,7 @@ import Layout from "../components/common/layout/layout"
 import CallToAction from "../components/sections/call-to-action/call-to-action"
 import ServiceList from "../components/sections/service-list/service-list"
 import ServiceHero from "../components/sections/service-hero/service-hero"
+import ServiceContent from "../components/sections/service-content/service-content"
 import Seo from "../components/common/seo/seo"
 import Breadcrumbs from "../components/common/breadcrumbs/breadcrumbs"
 import StructuredData from "../components/common/structured-data/structured-data"
@@ -35,6 +36,21 @@ const schemas = [
     serviceType: "Janitorial services",
     areaServed: SERVICE_AREAS.sanDiego,
   }),
+]
+
+const janitorialContent =
+  "Good Steward Cleaning delivers professional janitorial services in San Diego and Oceanside for offices, medical suites, schools, gyms, and retail facilities. As a locally based janitorial company, we staff every job with our own in-house, background-checked team — never subcontractors — so the same accountable crew returns visit after visit. Our San Diego janitorial services cover daily upkeep and specialized care, from Deep Cleaning and Sanitation Cleaning to Day Porter Services, floor care, and window cleaning. Whether you need a recurring schedule or a one-time deep clean, our janitorial company builds a custom plan around your facility, budget, and hours. Explore each service below or contact us for a free walkthrough and quote."
+
+const janitorialContentLinks = [
+  { label: "Deep Cleaning", path: ROUTES.services.deepCleaning },
+  {
+    label: "Sanitation Cleaning",
+    path: ROUTES.services.sanitationCleaning,
+  },
+  {
+    label: "Day Porter Services",
+    path: ROUTES.services.dayPorterServices,
+  },
 ]
 
 const Janitorial = () => {
@@ -236,6 +252,10 @@ const Janitorial = () => {
         subtitle="Professional Janitorial Services in San Diego"
         title="Janitorial Services in San Diego"
         description="Our professional janitorial services ensure your business maintains a clean, hygienic, and welcoming environment. From routine cleaning to tackling tough messes, we’ve got you covered. We specialize in private schools, office buildings, medical offices, and gym facilities across San Diego."
+      />
+      <ServiceContent
+        text={janitorialContent}
+        links={janitorialContentLinks}
       />
       <ServiceList services={services} />
       <CallToAction title={ctaTitle} description={ctaDescription} />

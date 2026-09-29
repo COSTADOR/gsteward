@@ -1,0 +1,37 @@
+@use "../../../styles/mixins" as *;
+
+.service-content {
+  margin-bottom: var(--spacing-xl);
+
+  &__text {
+    margin: 0 40px;
+    padding: var(--spacing-lg);
+    border-radius: 20px;
+    background: var(--primary-25);
+    color: var(--text-secondary);
+    font-size: 18px;
+    line-height: 1.7;
+
+    @include lg {
+      margin: 0;
+    }
+
+    @include sm {
+      padding: var(--spacing-md);
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    color: var(--primary-400);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--text-primary-hover);
+    }
+  }
+}
