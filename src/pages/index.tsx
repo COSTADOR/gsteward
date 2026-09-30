@@ -7,6 +7,7 @@ import Features from "../components/sections/features/features"
 import MainServices from "../components/sections/main-services/main-services"
 import Contact from "../components/sections/contact/contact"
 import Seo from "../components/common/seo/seo"
+import RequestQuote from "../components/sections/request-quote/request-quote"
 
 const seo = {
   title: "Commercial & Office Cleaning San Diego | Good Steward",
@@ -20,17 +21,22 @@ const IndexPage = () => {
     query {
       heroImage: file(relativePath: { eq: "hero-main.jpg" }) {
         childImageSharp {
-          gatsbyImageData(width: 940, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED, quality: 65)
+          gatsbyImageData(
+            width: 940
+            formats: [AUTO, WEBP, AVIF]
+            placeholder: BLURRED
+            quality: 65
+          )
         }
       }
     }
   `)
-  
+
   const title = `Your space, <em>our expertise</em>
             <br /> — quality cleaning
             <br /> you can trust`
   const description = `From offices to commercial spaces, our professional cleaning services deliver unmatched quality and a spotless experience.`
-  
+
   return (
     <Layout className="main-page">
       <Hero
@@ -39,6 +45,7 @@ const IndexPage = () => {
         showServicesButton={true}
         imgData={data.heroImage.childImageSharp.gatsbyImageData}
       />
+      <RequestQuote />
       <Steps />
       <Features />
       <MainServices />

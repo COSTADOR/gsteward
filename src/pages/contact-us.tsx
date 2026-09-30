@@ -4,6 +4,7 @@ import CallToAction from "../components/sections/call-to-action/call-to-action"
 import LetsConnect from "../components/sections/lets-connect/lets-connect"
 import { CONTACT_INFO } from "../constants/contacts.const"
 import Seo from "../components/common/seo/seo"
+import RequestQuote from "../components/sections/request-quote/request-quote"
 
 const title = `Ready to transform your space?`
 const description = `Call us today to discuss your needs, or visit us at one of our locations. We look forward to working with you!`
@@ -16,6 +17,7 @@ const seo = {
 const ContactUs = () => (
   <Layout>
     <LetsConnect></LetsConnect>
+    <RequestQuote />
     <CallToAction title={title} description={description} phone={true} />
   </Layout>
 )
