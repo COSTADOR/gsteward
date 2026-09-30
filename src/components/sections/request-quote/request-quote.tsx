@@ -70,7 +70,7 @@ const RequestQuote: React.FC<RequestQuoteProps> = ({ className = "" }) => {
     setServerMessage("")
 
     try {
-      const response = await fetch("/api/request-quote", {
+      const response = await fetch("/api/request-quote/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
