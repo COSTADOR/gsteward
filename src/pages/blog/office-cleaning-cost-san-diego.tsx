@@ -78,7 +78,9 @@ const OfficeCleaningCostSanDiegoPage = () => (
       <li>Dusting desks, surfaces, and other accessible areas</li>
       <li>Emptying trash and recycling bins</li>
       <li>Cleaning and sanitizing kitchen areas</li>
-      <li>Cleaning and sanitizing sinks, counters, and restroom surfaces</li>
+      <li>
+        Cleaning and sanitizing sinks, counters, and other restroom surfaces
+      </li>
       <li>Wiping down high-touch surfaces</li>
     </ul>
 
@@ -156,8 +158,9 @@ const OfficeCleaningCostSanDiegoPage = () => (
     <p>
       If you&apos;re looking for the average cost of commercial cleaning in San
       Diego, a per-square-foot range can provide a useful starting point.
-      Angi&apos;s 2026 national data puts recurring office cleaning in San Diego
-      around <strong>$0.10–$0.20+ per square foot per visit.</strong>
+      Angi&apos;s 2026 national data<sup>1</sup> puts recurring office cleaning
+      in San Diego around{" "}
+      <strong>$0.10–$0.20+ per square foot per visit.</strong>
     </p>
 
     <p>
@@ -355,8 +358,8 @@ const OfficeCleaningCostSanDiegoPage = () => (
     </p>
     <p>
       National 2026 sources put one-time commercial cleaning in a broad range
-      from $300–$1,500+. Again, the square footage and scope of the clean will
-      impact where you fall in that range.
+      from $300–$1,500+.<sup>1</sup> Again, the square footage and scope of the
+      clean will impact where you fall in that range.
     </p>
 
     <h3>Recurring Cleaning</h3>

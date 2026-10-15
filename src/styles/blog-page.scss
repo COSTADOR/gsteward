@@ -27,13 +27,6 @@
     text-align: center;
   }
 
-  &__eyebrow {
-    display: block;
-    margin-bottom: 16px;
-    font-size: var(--subtitle);
-    text-transform: uppercase;
-  }
-
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));

@@ -8,15 +8,18 @@ interface BlogListProps {
 }
 
 const BlogList: React.FC<BlogListProps> = ({ articles }) => {
+  const pageSize = 12
+  const [visibleCount, setVisibleCount] = React.useState(pageSize)
   const sortedArticles = [...articles].sort((a, b) =>
     b.publishedAt.localeCompare(a.publishedAt)
   )
+  const visibleArticles = sortedArticles.slice(0, visibleCount)
+  const hasMoreArticles = visibleCount < sortedArticles.length
 
   return (
     <section className="blog-list" aria-labelledby="latest-articles-title">
       <div className="blog-list__container container">
         <div className="blog-list__heading">
-          <span className="blog-list__eyebrow">From the Good Steward team</span>
           <h2 className="blog-list__title title-lg" id="latest-articles-title">
             Latest articles
           </h2>
@@ -26,7 +29,7 @@ const BlogList: React.FC<BlogListProps> = ({ articles }) => {
             sortedArticles.length === 1 ? "blog-list__grid--single" : ""
           }`}
         >
-          {sortedArticles.map(article => (
+          {visibleArticles.map(article => (
             <article className="blog-card" key={article.path}>
               <Link
                 className="blog-card__image-link"
@@ -63,6 +66,17 @@ const BlogList: React.FC<BlogListProps> = ({ articles }) => {
             </article>
           ))}
         </div>
+        {hasMoreArticles && (
+          <div className="blog-list__more">
+            <button
+              type="button"
+              className="button button--primary"
+              onClick={() => setVisibleCount(count => count + pageSize)}
+            >
+              Load more
+            </button>
+          </div>
+        )}
       </div>
     </section>
   )

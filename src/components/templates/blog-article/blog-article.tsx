@@ -22,7 +22,6 @@ const BlogArticle: React.FC<BlogArticleProps> = ({
       <header className="blog-article__hero">
         <div className="blog-article__hero-container container">
           <Breadcrumbs items={breadcrumbs} />
-          <p className="blog-article__eyebrow">Commercial Cleaning Guide</p>
           <h1 className="blog-article__title">{article.title}</h1>
           <div className="blog-article__meta">
             <time dateTime={article.publishedAt}>{article.publishedLabel}</time>

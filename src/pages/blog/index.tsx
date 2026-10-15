@@ -53,7 +53,6 @@ const BlogPage = () => (
     <section className="blog-services" aria-labelledby="blog-services-title">
       <div className="blog-services__container container">
         <div className="blog-services__header">
-          <span className="blog-services__eyebrow">Explore Good Steward</span>
           <h2
             className="blog-services__title title-lg"
             id="blog-services-title"

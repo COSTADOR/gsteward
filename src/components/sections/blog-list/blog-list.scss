@@ -16,13 +16,6 @@
     text-align: center;
   }
 
-  &__eyebrow {
-    display: block;
-    margin-bottom: 16px;
-    font-size: var(--subtitle);
-    text-transform: uppercase;
-  }
-
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -44,6 +37,12 @@
     @include sm {
       grid-template-columns: 1fr;
     }
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-lg);
   }
 }
 
