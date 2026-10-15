@@ -5,6 +5,7 @@ import Hero from "../components/sections/hero/hero"
 import Steps from "../components/sections/steps/steps"
 import Features from "../components/sections/features/features"
 import MainServices from "../components/sections/main-services/main-services"
+import VideoShowcase from "../components/sections/video-showcase/video-showcase"
 import Contact from "../components/sections/contact/contact"
 import Seo from "../components/common/seo/seo"
 import RequestQuote from "../components/sections/request-quote/request-quote"
@@ -49,6 +50,7 @@ const IndexPage = () => {
       <Steps />
       <Features />
       <MainServices />
+      <VideoShowcase />
       <Contact />
     </Layout>
   )
