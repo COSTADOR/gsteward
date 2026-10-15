@@ -90,9 +90,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 const Header: React.FC = () => {
   const location = useLocation()
   const burgerRef = useRef<HTMLButtonElement>(null)
-  const dropdownTriggers = useRef<Partial<Record<MenuGroup, HTMLButtonElement>>>(
-    {}
-  )
+  const dropdownTriggers = useRef<
+    Partial<Record<MenuGroup, HTMLButtonElement>>
+  >({})
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [openGroup, setOpenGroup] = useState<MenuGroup | null>(null)
@@ -155,7 +155,11 @@ const Header: React.FC = () => {
     >
       <div className="header__background" />
       <div className="header__container container">
-        <Link to={ROUTES.home} className="header__logo" onClick={closeNavigation}>
+        <Link
+          to={ROUTES.home}
+          className="header__logo"
+          onClick={closeNavigation}
+        >
           <img
             src="/images/logo.svg"
             alt="Good Steward Cleaning"
@@ -254,6 +258,17 @@ const Header: React.FC = () => {
                 onClick={closeNavigation}
               >
                 FAQ
+              </Link>
+            </li>
+            <li className="header__nav-item">
+              <Link
+                to={ROUTES.blog.index}
+                className="header__nav-link"
+                activeClassName="header__nav-link--active"
+                partiallyActive
+                onClick={closeNavigation}
+              >
+                Blog
               </Link>
             </li>
             <li className="header__nav-item header__nav-item--mobile-contact">

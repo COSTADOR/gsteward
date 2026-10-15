@@ -7,6 +7,7 @@ interface ServiceHeroProps {
   title: string
   description: React.ReactNode
   breadcrumbs?: React.ReactNode
+  showCta?: boolean
 }
 
 const ServiceHero: React.FC<ServiceHeroProps> = ({
@@ -14,6 +15,7 @@ const ServiceHero: React.FC<ServiceHeroProps> = ({
   title,
   description,
   breadcrumbs,
+  showCta = true,
 }) => {
   return (
     <section className="service-hero">
@@ -32,15 +34,17 @@ const ServiceHero: React.FC<ServiceHeroProps> = ({
         {/*    </div>*/}
         {/*  ))}*/}
         {/*</div>*/}
-        <div className="service-hero__cta">
-          <p>
-            Let’s get started on your cleaning project — contact us today for
-            your personalized quote!
-          </p>
-          <Link to="/contact-us" className="button button--primary with-icon">
-            Contact Us
-          </Link>
-        </div>
+        {showCta && (
+          <div className="service-hero__cta">
+            <p>
+              Let’s get started on your cleaning project — contact us today for
+              your personalized quote!
+            </p>
+            <Link to="/contact-us" className="button button--primary with-icon">
+              Contact Us
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   )

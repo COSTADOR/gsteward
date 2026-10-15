@@ -47,6 +47,7 @@ export const COMPANY_NAV_ITEMS: NavigationLink[] = [
   { name: "Home", path: ROUTES.home },
   { name: "About Us", path: ROUTES.aboutUs },
   { name: "FAQ", path: ROUTES.faq },
+  { name: "Blog", path: ROUTES.blog.index },
   { name: "Contact Us", path: ROUTES.contactUs },
 ]
 

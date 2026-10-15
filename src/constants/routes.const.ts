@@ -3,6 +3,10 @@ export const ROUTES = {
   aboutUs: "/about-us/",
   contactUs: "/contact-us/",
   faq: "/faq/",
+  blog: {
+    index: "/blog/",
+    officeCleaningCostSanDiego: "/blog/office-cleaning-cost-san-diego/",
+  },
   janitorial: "/janitorial/",
   maintenance: "/maintenance/",
   services: {
