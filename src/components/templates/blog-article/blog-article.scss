@@ -125,6 +125,32 @@
     color: var(--text-primary);
   }
 
+  &__pro-tip {
+    margin: 32px 0;
+    padding: 26px 30px;
+    border-radius: 16px;
+    background: var(--primary-25);
+    color: var(--text-primary);
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__button-row {
+    margin: 32px 0 48px;
+
+    .blog-article__button {
+      color: var(--text-white);
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible {
+        color: var(--text-white);
+      }
+    }
+  }
+
   &__comparison {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -291,6 +317,10 @@
     }
 
     &__quick-answer {
+      padding: 22px 20px;
+    }
+
+    &__pro-tip {
       padding: 22px 20px;
     }
 

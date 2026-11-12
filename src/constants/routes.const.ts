@@ -6,6 +6,7 @@ export const ROUTES = {
   blog: {
     index: "/blog/",
     officeCleaningCostSanDiego: "/blog/office-cleaning-cost-san-diego/",
+    whatIsCommercialCleaning: "/blog/what-is-commercial-cleaning/",
   },
   janitorial: "/janitorial/",
   maintenance: "/maintenance/",
