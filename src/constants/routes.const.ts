@@ -7,6 +7,7 @@ export const ROUTES = {
     index: "/blog/",
     officeCleaningCostSanDiego: "/blog/office-cleaning-cost-san-diego/",
     whatIsCommercialCleaning: "/blog/what-is-commercial-cleaning/",
+    commercialCleaningChecklist: "/blog/commercial-cleaning-checklist/",
   },
   janitorial: "/janitorial/",
   maintenance: "/maintenance/",

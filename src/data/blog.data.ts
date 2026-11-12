@@ -38,7 +38,26 @@ export const WHAT_IS_COMMERCIAL_CLEANING_ARTICLE: BlogArticleSummary = {
     "Good Steward team cleaning a school classroom with backpack vacuums and mops in San Diego",
 }
 
+export const COMMERCIAL_CLEANING_CHECKLIST_ARTICLE: BlogArticleSummary = {
+  slug: "commercial-cleaning-checklist",
+  path: ROUTES.blog.commercialCleaningChecklist,
+  title: "What’s Included in a Commercial Cleaning Service? (Full Checklist)",
+  seoTitle: "Commercial Cleaning Checklist: What's Included | San Diego",
+  description:
+    "What does commercial cleaning include? See a full checklist of routine tasks, specialized services, and common exclusions for San Diego businesses.",
+  excerpt:
+    "See a full checklist of routine commercial cleaning tasks, specialized services, and common exclusions for San Diego businesses.",
+  publishedAt: "2026-11-12",
+  publishedLabel: "November 12, 2026",
+  modifiedAt: "2026-11-12",
+  author: "Christina Okhotin",
+  image: "/images/blog/commercial-cleaning-team-facility-hallway.webp",
+  imageAlt:
+    "Good Steward commercial cleaning team walking through a facility hallway with equipment",
+}
+
 export const BLOG_ARTICLES: BlogArticleSummary[] = [
+  COMMERCIAL_CLEANING_CHECKLIST_ARTICLE,
   WHAT_IS_COMMERCIAL_CLEANING_ARTICLE,
   OFFICE_CLEANING_COST_ARTICLE,
 ]
@@ -100,5 +119,34 @@ export const WHAT_IS_COMMERCIAL_CLEANING_FAQ: FaqItem[] = [
     question: "Do commercial cleaning companies provide their own staff?",
     answer:
       "Commercial cleaning companies use different staffing models. Some use in-house teams, while others subcontract the work. Ask cleaning companies who will perform the cleaning and who will be accountable for service concerns. Good Steward provides its own reputable cleaning staff rather than outsource the work.",
+  },
+]
+
+export const COMMERCIAL_CLEANING_CHECKLIST_FAQ: FaqItem[] = [
+  {
+    question: "What tasks does commercial cleaning include?",
+    answer:
+      "Commercial cleaning usually includes routine tasks like emptying trash cans, dusting, vacuuming, mopping, and cleaning restrooms and break rooms. Depending on the facility, it may also include maintaining reception areas, meeting rooms, classrooms, and other shared spaces. The exact scope of work depends on your building's needs and the services outlined in your cleaning agreement.",
+  },
+  {
+    question: "Does commercial cleaning include deep cleaning?",
+    answer:
+      "Not always. Most routine cleaning services focus on maintenance. This includes recurring tasks like wiping surfaces, cleaning floors, and taking out trash. Deep cleaning involves more intensive attention to areas that may be harder to reach. Some companies offer deep cleaning as an additional service. Others may incorporate specialized tasks into a customized cleaning plan. Clarify what's included before you sign.",
+  },
+  {
+    question: "Are cleaning supplies included in commercial cleaning services?",
+    answer:
+      "This depends on two things: the cleaning company and the terms of your agreement. Some providers supply cleaning products and equipment. Some may require the facility to provide certain items. Restroom consumables, such as toilet paper, paper towels, and hand soap, may also be handled separately. Ask each provider what they supply.",
+  },
+  {
+    question: "How often should a commercial building be cleaned?",
+    answer:
+      "The frequency of cleaning depends on how your facility is used. Spaces with high foot traffic and frequently used restrooms or shared spaces may need daily cleaning. Other areas may only need attention a few times a week. Your cleaning schedule should reflect the amount of foot traffic coming in and the types of activities taking place.",
+  },
+  {
+    question:
+      "What is the difference between janitorial services and commercial cleaning?",
+    answer:
+      "The terms commercial janitorial services and commercial cleaning are often used interchangeably. Both can include routine tasks like emptying trash, cleaning restrooms, maintaining floors, and tidying shared spaces. Commercial cleaning is a larger umbrella term that can also refer to more specialized services. This includes deep cleaning, carpet extraction, and hard-floor maintenance. However, it’s most important to understand which specific tasks a company includes in its service agreement. Good Steward's janitorial services in San Diego cover both.",
   },
 ]
